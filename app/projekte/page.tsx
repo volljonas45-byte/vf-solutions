@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PROJEKTBEREICHE, REFERENZKUNDEN } from "@/lib/data";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export default function Projekte() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-[#0A1628] grid-bg-dark py-24">
+      <section className="bg-[#0A1628] py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-4 block">Projekte & Referenzen</span>
@@ -18,8 +18,8 @@ export default function Projekte() {
               180+ Projekte.<br />Seit 1989.
             </h1>
             <p className="text-[#94A3B8] text-lg leading-relaxed">
-              vf solutions hat seit 1989 weit über 180 Projekte in den Bereichen Anwendungsentwicklung,
-              CAD/PDM-Einführung, -Migration und Sachnummerung erfolgreich realisiert.
+              vf solutions hat seit 1989 weit Ã¼ber 180 Projekte in den Bereichen Anwendungsentwicklung,
+              CAD/PDM-EinfÃ¼hrung, -Migration und Sachnummerung erfolgreich realisiert.
             </p>
           </div>
           <div className="flex flex-wrap gap-6 mt-12">
@@ -45,7 +45,7 @@ export default function Projekte() {
             <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-3 block">Projektbereiche</span>
             <h2 className="text-3xl font-black text-[#0A1628] tracking-tight">Typische Projektschwerpunkte</h2>
             <p className="text-[#4A5568] mt-3 max-w-xl mx-auto">
-              vf solutions unterstützt Unternehmen dort, wo CAD-, PDM- und ERP-Prozesse stabiler,
+              vf solutions unterstÃ¼tzt Unternehmen dort, wo CAD-, PDM- und ERP-Prozesse stabiler,
               nachvollziehbarer und besser integrierbar werden sollen.
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function Projekte() {
       </section>
 
       {/* REFERENZKUNDEN */}
-      <section id="referenzkunden" className="section bg-[#0A1628] grid-bg-dark">
+      <section id="referenzkunden" className="section bg-[#0A1628]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-3 block">Referenzkunden</span>
@@ -90,8 +90,8 @@ export default function Projekte() {
               43+ namhafte Unternehmen
             </h2>
             <p className="text-[#64748B] max-w-lg mx-auto">
-              Aus Maschinenbau, Anlagenbau, Medizintechnik, Automobilzulieferung und weiteren Branchen —
-              überwiegend mittelständische Unternehmen in Deutschland, Österreich und der Schweiz.
+              Aus Maschinenbau, Anlagenbau, Medizintechnik, Automobilzulieferung und weiteren Branchen â€”
+              Ã¼berwiegend mittelstÃ¤ndische Unternehmen in Deutschland, Ã–sterreich und der Schweiz.
             </p>
           </div>
 
@@ -115,8 +115,8 @@ export default function Projekte() {
       <section className="bg-[#1E6FD9] py-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="text-2xl font-black text-white mb-2">Werden Sie der nächste Referenzkunde.</h2>
-            <p className="text-blue-200">Über 35 Jahre Erfahrung — sofort verfügbar für Ihr Projekt.</p>
+            <h2 className="text-2xl font-black text-white mb-2">Werden Sie der nÃ¤chste Referenzkunde.</h2>
+            <p className="text-blue-200">Ãœber 35 Jahre Erfahrung â€” sofort verfÃ¼gbar fÃ¼r Ihr Projekt.</p>
           </div>
           <Link href="/kontakt" className="shrink-0 bg-white text-[#1E6FD9] px-6 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors">
             Jetzt Kontakt aufnehmen
@@ -126,3 +126,4 @@ export default function Projekte() {
     </>
   );
 }
+

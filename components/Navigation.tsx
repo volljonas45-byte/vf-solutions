@@ -17,32 +17,32 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-[#E5E7EB]" style={{backdropFilter: "blur(12px)"}}>
+      <div className="max-w-7xl mx-auto px-6 h-[60px] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3">
           <div className="flex items-center">
-            <span className="text-2xl font-black text-[#0A1628] tracking-tight">vf</span>
-            <span className="text-2xl font-light text-[#1E6FD9] tracking-tight ml-0.5">solutions</span>
+            <span className="text-xl font-bold text-[#0A1628] tracking-tight">vf</span>
+            <span className="text-xl font-light text-[#1E6FD9] tracking-tight">solutions</span>
           </div>
-          <div className="hidden sm:flex flex-col ml-2 pl-2 border-l border-[#E2E8F0]">
-            <span className="text-[10px] font-medium text-[#718096] uppercase tracking-widest leading-tight">CAD · PDM · ERP</span>
-            <span className="text-[10px] text-[#718096] uppercase tracking-widest leading-tight">Beratung</span>
+          <div className="hidden sm:flex flex-col ml-2 pl-3 border-l border-[#E5E7EB]">
+            <span className="text-[9.5px] font-medium text-[#9CA3AF] uppercase tracking-[0.15em] leading-tight">CAD · PDM · ERP</span>
+            <span className="text-[9.5px] text-[#9CA3AF] uppercase tracking-[0.15em] leading-tight">Beratung</span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-0.5">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-150 ${
+                className={`px-3.5 py-1.5 text-sm transition-colors duration-150 ${
                   active
-                    ? "bg-[#EEF4FF] text-[#1E6FD9]"
-                    : "text-[#4A5568] hover:text-[#0A1628] hover:bg-[#F8F9FB]"
+                    ? "text-[#1E6FD9] font-medium"
+                    : "text-[#4B5563] hover:text-[#0A1628]"
                 }`}
               >
                 {link.label}
@@ -55,7 +55,7 @@ export default function Navigation() {
         <div className="flex items-center gap-3">
           <Link
             href="/kontakt"
-            className="hidden sm:inline-flex items-center gap-2 bg-[#0A1628] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#122040] transition-colors"
+            className="hidden sm:inline-flex items-center bg-[#0A1628] text-white px-4 py-2 text-sm font-medium hover:bg-[#122040] transition-colors"
           >
             Kontakt aufnehmen
           </Link>

@@ -10,74 +10,106 @@ export default function UeberUns() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-[#0A1628] grid-bg-dark py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-4 block">Über vf solutions</span>
-              <h1 className="text-5xl font-black text-white tracking-tight mb-6">
-                Unabhängige Beratung für stabile technische Prozesse
-              </h1>
-              <p className="text-[#94A3B8] text-lg leading-relaxed">
-                vf solutions steht für unabhängige, system- und anbieterneutrale Beratung
-                im CAD/PDM/ERP-Umfeld. Im Mittelpunkt stehen stabile Prozesse, verständliche
-                Lösungen und eine realistische Umsetzung im laufenden Betrieb.
-              </p>
-            </div>
+      <section className="relative bg-[#0A1628] min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/vf-solutions/images/hero-industry.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          <div className="absolute inset-0 photo-overlay-dark" />
+        </div>
 
-            {/* Profile card */}
-            <div className="bg-[#0D1F3C] border border-white/10 rounded-xl p-8">
-              <div className="flex items-start gap-5 mb-6 pb-6 border-b border-white/10">
-                <div className="w-16 h-16 rounded-xl bg-[#1E6FD9]/20 border border-[#1E6FD9]/30 flex items-center justify-center shrink-0">
-                  <span className="text-2xl font-black text-[#1E6FD9]">VF</span>
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-[#1E6FD9] mb-1">Dipl.-Ing. (FH)</div>
-                  <h2 className="text-xl font-black text-white">Volker Freundt</h2>
-                  <p className="text-[#64748B] text-sm mt-0.5">Inhaber · Berater · Projektleiter</p>
-                </div>
-              </div>
-              <div className="space-y-3">
+        <div className="relative max-w-7xl mx-auto px-6 w-full py-24">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-3 mb-7">
+              <span className="block w-8 h-px bg-[#1E6FD9]" />
+              <span className="text-[#1E6FD9] text-xs font-semibold tracking-[0.18em] uppercase">Über vf solutions</span>
+            </div>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+              Unabhängige Beratung für stabile technische Prozesse
+            </h1>
+            <p className="text-[#94A3B8] text-lg leading-relaxed">
+              vf solutions steht für system- und anbieterneutrale Beratung im
+              CAD/PDM/ERP-Umfeld. Im Mittelpunkt stehen stabile Prozesse und
+              eine realistische Umsetzung im laufenden Betrieb.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PERSON */}
+      <section className="bg-white border-b border-[#E5E7EB]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            <div className="py-16 lg:pr-20 border-b lg:border-b-0 lg:border-r border-[#E5E7EB]">
+              <span className="rule-blue" />
+              <div className="text-xs font-mono text-[#9CA3AF] mb-1">Dipl.-Ing. (FH)</div>
+              <h2 className="text-3xl font-bold text-[#0A1628] mb-1">Volker Freundt</h2>
+              <p className="text-[#6B7280] text-sm mb-8">Inhaber · Berater · Projektleiter</p>
+
+              <div className="space-y-0 mb-8">
                 {[
                   { label: "Ausbildung", value: "Maschinenbau (FH)" },
                   { label: "Erfahrung", value: "35+ Jahre CAD/PDM/ERP" },
                   { label: "Projekte", value: "180+ abgeschlossen" },
-                  { label: "Einsatz", value: "D / A / CH" },
+                  { label: "Einsatz", value: "Deutschland / Österreich / Schweiz" },
                   { label: "Sprachen", value: "Deutsch, Englisch" },
-                  { label: "Verfügbar", value: "Sofort" },
+                  { label: "Verfügbarkeit", value: "Sofort" },
                 ].map((row) => (
-                  <div key={row.label} className="flex justify-between items-center">
-                    <span className="text-[#475569] text-sm">{row.label}</span>
-                    <span className="text-[#94A3B8] text-sm font-medium">{row.value}</span>
+                  <div key={row.label} className="flex justify-between items-baseline border-b border-[#F3F4F6] py-3 last:border-0">
+                    <span className="text-sm text-[#9CA3AF]">{row.label}</span>
+                    <span className="text-sm font-medium text-[#111827]">{row.value}</span>
                   </div>
                 ))}
               </div>
+
+              <div className="flex gap-3">
+                <a
+                  href={`tel:${CONTACT.telHref}`}
+                  className="bg-[#0A1628] text-white px-5 py-2.5 text-sm font-medium hover:bg-[#122040] transition-colors"
+                >
+                  {CONTACT.tel}
+                </a>
+                <Link
+                  href="/kontakt"
+                  className="border border-[#E5E7EB] text-[#374151] px-5 py-2.5 text-sm font-medium hover:bg-[#F7F8FA] transition-colors"
+                >
+                  Kontakt aufnehmen
+                </Link>
+              </div>
+            </div>
+
+            {/* Photo */}
+            <div className="hidden lg:block relative min-h-[480px]">
+              <img
+                src="/vf-solutions/images/factory-cad.jpg"
+                alt="Technische Präzision"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-[#0A1628]/15" />
             </div>
           </div>
         </div>
       </section>
 
       {/* PHILOSOPHIE */}
-      <section className="section bg-white">
+      <section className="section bg-[#F7F8FA] border-b border-[#E5E7EB]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-4 block text-center">Philosophie</span>
-            <h2 className="text-3xl font-black text-[#0A1628] tracking-tight text-center mb-10">
-              Der Anwalt der Kunden
-            </h2>
-            <div className="space-y-6">
-              <div className="bg-[#F8F9FB] border-l-4 border-[#1E6FD9] rounded-r-xl p-6">
-                <p className="text-[#1A2332] leading-relaxed">
-                  <strong className="text-[#0A1628]">vf solutions versteht sich allein als Anwalt der Interessen seiner Kunden</strong> — unabhängig von Softwareherstellern, deren Vertriebsinteressen oder Partnerprogrammen.
-                </p>
-              </div>
-              <p className="text-[#4A5568] leading-relaxed">
+          <div className="max-w-2xl">
+            <span className="rule-blue" />
+            <h2 className="text-2xl font-bold text-[#0A1628] mb-6">Der Anwalt der Kunden</h2>
+            <div className="space-y-4 text-[#374151] leading-relaxed">
+              <p>
+                <strong className="text-[#0A1628]">vf solutions versteht sich allein als Anwalt der Interessen seiner Kunden</strong> — unabhängig von Softwareherstellern, deren Vertriebsinteressen oder Partnerprogrammen.
+              </p>
+              <p>
                 Das bedeutet: Systemauswahl nach den tatsächlichen Anforderungen des Kunden, nicht nach Marktanteilen oder Provisionen. Beratung, die unbequeme Wahrheiten ausspricht, wenn nötig.
               </p>
-              <p className="text-[#4A5568] leading-relaxed">
+              <p>
                 vf solutions ist zu <strong className="text-[#0A1628]">100% system- und anbieterneutral</strong> aufgestellt. Diese Unabhängigkeit ist kein Marketing-Versprechen — sie ist das Geschäftsmodell.
               </p>
-              <p className="text-[#4A5568] leading-relaxed">
+              <p>
                 Projekte laufen <strong className="text-[#0A1628]">ohne signifikante Störung des Tagesbetriebs</strong>. Die Projektdauer ist kurz, die Ergebnisse sind <strong className="text-[#0A1628]">„controlling-fest"</strong> — messbar und nachweisbar.
               </p>
             </div>
@@ -86,30 +118,34 @@ export default function UeberUns() {
       </section>
 
       {/* KARRIERE TIMELINE */}
-      <section className="section bg-[#F8F9FB] border-t border-[#E2E8F0]">
+      <section className="section bg-white border-b border-[#E5E7EB]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-3 block">Werdegang</span>
-            <h2 className="text-3xl font-black text-[#0A1628] tracking-tight">35 Jahre Erfahrung</h2>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-[88px] top-0 bottom-0 w-px bg-[#E2E8F0]" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <div>
+              <span className="rule-blue" />
+              <h2 className="text-2xl font-bold text-[#0A1628] mb-4">35 Jahre Erfahrung</h2>
+              <p className="text-[#6B7280] text-sm leading-relaxed">
+                Der Werdegang von Volker Freundt — von der Erstausbildung über industrielle Praxis bis zur unabhängigen Beratung.
+              </p>
+            </div>
 
-              <div className="space-y-0">
-                {KARRIERE.map((item, i) => (
-                  <div key={i} className="flex gap-6 relative pb-8 last:pb-0">
-                    <div className="w-[88px] shrink-0 text-right">
-                      <span className="text-xs font-mono font-bold text-[#1E6FD9] bg-[#EEF4FF] px-2 py-0.5 rounded whitespace-nowrap">{item.year}</span>
+            <div className="lg:col-span-2">
+              <div className="relative">
+                <div className="absolute top-0 bottom-0 w-px bg-[#E5E7EB]" style={{left: "72px"}} />
+                <div className="space-y-0">
+                  {KARRIERE.map((item, i) => (
+                    <div key={i} className="flex gap-6 pb-7 last:pb-0 relative">
+                      <div className="w-[72px] shrink-0 text-right pt-0.5">
+                        <span className="text-xs font-mono font-semibold text-[#1E6FD9]">{item.year}</span>
+                      </div>
+                      <div className="relative pl-5">
+                        <div className="absolute top-[5px] w-2.5 h-2.5 rounded-full border-2 border-[#1E6FD9] bg-white" style={{left: "-5px"}} />
+                        <h3 className="text-sm font-semibold text-[#111827] leading-tight">{item.title}</h3>
+                        {item.desc && <p className="text-xs text-[#6B7280] mt-0.5 leading-relaxed">{item.desc}</p>}
+                      </div>
                     </div>
-                    <div className="relative">
-                      <div className="absolute -left-[21px] top-1 w-3 h-3 rounded-full border-2 border-[#1E6FD9] bg-white" />
-                      <h3 className="font-bold text-[#0A1628] text-sm leading-tight mt-0.5">{item.title}</h3>
-                      {item.desc && <p className="text-sm text-[#64748B] mt-0.5">{item.desc}</p>}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -117,23 +153,25 @@ export default function UeberUns() {
       </section>
 
       {/* PARTNER */}
-      <section className="section bg-white border-t border-[#E2E8F0]">
+      <section className="section bg-[#F7F8FA]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-3 block">Kooperationsverbund</span>
-            <h2 className="text-3xl font-black text-[#0A1628] tracking-tight mb-4">Partner-Netzwerk</h2>
-            <p className="text-[#4A5568] max-w-xl mx-auto">
-              Erfolgreiche Projekte stemmt man selten im Alleingang. Ein Kooperationsverbund
-              fördert die Ausweitung von Know-How und stellt Kapazitätsreserven sicher.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {PARTNER.map((p) => (
-              <div key={p.name} className="bg-[#F8F9FB] border border-[#E2E8F0] rounded-xl p-6 text-center card-hover">
-                <div className="text-2xl font-black text-[#0A1628] mb-3">{p.name}</div>
-                <p className="text-sm text-[#64748B] leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <div>
+              <span className="rule-blue" />
+              <h2 className="text-2xl font-bold text-[#0A1628] mb-4">Partner-Netzwerk</h2>
+              <p className="text-[#6B7280] text-sm leading-relaxed">
+                Erfolgreiche Projekte stemmt man selten im Alleingang. Ein Kooperationsverbund
+                erweitert das Know-How und sichert Kapazitätsreserven.
+              </p>
+            </div>
+            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {PARTNER.map((p) => (
+                <div key={p.name} className="bg-white border border-[#E5E7EB] p-6">
+                  <div className="text-xl font-bold text-[#0A1628] mb-2">{p.name}</div>
+                  <p className="text-sm text-[#6B7280] leading-relaxed">{p.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -142,14 +180,14 @@ export default function UeberUns() {
       <section className="bg-[#0A1628] py-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="text-2xl font-black text-white mb-2">Direkt ansprechen.</h2>
-            <p className="text-[#64748B]">Volker Freundt ist Ihr direkter Ansprechpartner — kein Vertrieb, kein Umweg.</p>
+            <h2 className="text-xl font-bold text-white mb-1">Direkt ansprechen.</h2>
+            <p className="text-[#64748B] text-sm">Volker Freundt ist Ihr direkter Ansprechpartner — kein Vertrieb, kein Umweg.</p>
           </div>
           <div className="flex gap-3 shrink-0">
-            <a href={`tel:${CONTACT.telHref}`} className="bg-white/10 border border-white/20 text-white px-5 py-2.5 rounded-md font-medium hover:bg-white/20 transition-colors text-sm">
+            <a href={`tel:${CONTACT.telHref}`} className="border border-white/20 text-[#94A3B8] hover:text-white px-5 py-2.5 text-sm transition-colors">
               {CONTACT.tel}
             </a>
-            <Link href="/kontakt" className="bg-[#1E6FD9] text-white px-5 py-2.5 rounded-md font-semibold hover:bg-[#1a5fc4] transition-colors text-sm">
+            <Link href="/kontakt" className="bg-[#1E6FD9] text-white px-5 py-2.5 text-sm font-semibold hover:bg-[#1a5fc4] transition-colors">
               Kontakt aufnehmen
             </Link>
           </div>
