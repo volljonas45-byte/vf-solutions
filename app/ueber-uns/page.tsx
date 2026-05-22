@@ -13,7 +13,7 @@ export default function UeberUns() {
       <section className="relative bg-[#0A1628] min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/hero-industry.jpg"
+            src="/vf-solutions/images/hero-ueber.jpg"
             alt=""
             className="w-full h-full object-cover object-center opacity-30"
           />
@@ -80,14 +80,18 @@ export default function UeberUns() {
               </div>
             </div>
 
-            {/* Photo */}
-            <div className="hidden lg:block relative min-h-[480px]">
-              <img
-                src="/vf-solutions/images/factory-cad.jpg"
-                alt="Technische Präzision"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[#0A1628]/15" />
+            {/* Placeholder */}
+            <div className="hidden lg:flex relative min-h-[480px] items-center justify-center bg-[#F7F8FA]">
+              <div className="text-center select-none">
+                <div className="w-14 h-14 border-2 border-dashed border-[#D1D5DB] rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <rect x="2" y="2" width="18" height="18" rx="2" stroke="#C4C9D4" strokeWidth="1.5"/>
+                    <circle cx="8" cy="8" r="2" stroke="#C4C9D4" strokeWidth="1.5"/>
+                    <path d="M2 15l5-4 4 3 3-3 6 5" stroke="#C4C9D4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <p className="text-[#C4C9D4] text-xs tracking-wide">Foto folgt</p>
+              </div>
             </div>
           </div>
         </div>
