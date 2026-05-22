@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import {
   CAD_SYSTEME, PDM_SYSTEME, ERP_SYSTEME,
   PROGRAMMIERUNG, API_SYSTEME, DATENBANKEN, CONTACT
@@ -66,7 +66,7 @@ export default function Kompetenz() {
               Systemtiefe aus 35 Jahren Praxis
             </h1>
             <p className="text-[#94A3B8] text-lg leading-relaxed">
-              Kenntnisse in Ã¼ber 40 Softwaresystemen â€” CAD, PDM, ERP, API-Programmierung und Datenbanken.
+              Kenntnisse in über 40 Softwaresystemen — CAD, PDM, ERP, API-Programmierung und Datenbanken.
               Kein theoretisches Wissen, sondern nachgewiesene Projekterfahrung.
             </p>
           </div>
@@ -117,9 +117,9 @@ export default function Kompetenz() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-center">
             {[
-              { icon: "â—ˆ", label: "Einsatzgebiet", value: "Deutschland Â· Ã–sterreich Â· Schweiz" },
-              { icon: "â—‰", label: "VerfÃ¼gbarkeit", value: "3â€“5 Tage pro Woche fulltime" },
-              { icon: "â—Ž", label: "Starttermin", value: "Sofort verfÃ¼gbar" },
+              { icon: "→", label: "Einsatzgebiet", value: "Deutschland / Österreich / Schweiz" },
+              { icon: "→", label: "Verfügbarkeit", value: "3–5 Tage pro Woche fulltime" },
+              { icon: "→", label: "Starttermin", value: "Sofort verfügbar" },
             ].map((item) => (
               <div key={item.label} className="bg-white border border-[#E2E8F0] rounded-xl p-6">
                 <div className="text-3xl text-[#1E6FD9] mb-3">{item.icon}</div>
@@ -134,7 +134,7 @@ export default function Kompetenz() {
       {/* CTA */}
       <section className="bg-[#0A1628] py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-2xl font-black text-white mb-4">Systeme kennen ist eine Sache â€” Projekte umsetzen eine andere.</h2>
+          <h2 className="text-2xl font-black text-white mb-4">Systeme kennen ist eine Sache — Projekte umsetzen eine andere.</h2>
           <p className="text-[#64748B] mb-8 max-w-xl mx-auto">
             180+ abgeschlossene Projekte zeigen, was aus technischem Wissen in der Praxis entsteht.
           </p>

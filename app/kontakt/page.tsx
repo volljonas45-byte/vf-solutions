@@ -1,8 +1,8 @@
-﻿import { CONTACT } from "@/lib/data";
+import { CONTACT } from "@/lib/data";
 
 export const metadata = {
   title: "Kontakt | vf solutions",
-  description: "Nehmen Sie Kontakt mit vf solutions auf. Volker Freundt, Freiburg im Breisgau â€” direkt erreichbar.",
+  description: "Nehmen Sie Kontakt mit vf solutions auf. Volker Freundt, Freiburg im Breisgau — direkt erreichbar.",
 };
 
 export default function Kontakt() {
@@ -17,8 +17,8 @@ export default function Kontakt() {
               Projekt oder Prozessfrage besprechen
             </h1>
             <p className="text-[#94A3B8] text-lg leading-relaxed">
-              Ein direkter Austausch klÃ¤rt meist schnell, ob und wie vf solutions
-              ein technisches Vorhaben sinnvoll unterstÃ¼tzen kann.
+              Ein direkter Austausch klärt meist schnell, ob und wie vf solutions
+              ein technisches Vorhaben sinnvoll unterstützen kann.
             </p>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function Kontakt() {
                     <p className="text-[#64748B] text-sm">{CONTACT.person}</p>
                     <div className="mt-1 inline-flex items-center gap-1.5 bg-[#ECFDF5] text-[#059669] text-xs font-medium px-2 py-0.5 rounded-full border border-[#A7F3D0]">
                       <span className="w-1.5 h-1.5 bg-[#059669] rounded-full" />
-                      Sofort verfÃ¼gbar
+                      Sofort verfügbar
                     </div>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function Kontakt() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-[#0A1628]">Route in Google Maps Ã¶ffnen</p>
+                  <p className="text-sm font-medium text-[#0A1628]">Route in Google Maps öffnen</p>
                   <p className="text-xs text-[#94A3B8]">{CONTACT.address}, {CONTACT.city}</p>
                 </div>
                 <svg className="text-[#94A3B8] group-hover:text-[#1E6FD9] transition-colors" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -130,7 +130,7 @@ export default function Kontakt() {
             {/* Kontaktformular */}
             <div className="bg-white border border-[#E2E8F0] rounded-xl p-8">
               <h2 className="text-xl font-bold text-[#0A1628] mb-2">Nachricht senden</h2>
-              <p className="text-sm text-[#64748B] mb-6">Schildern Sie kurz Ihre Aufgabenstellung â€” wir melden uns zeitnah.</p>
+              <p className="text-sm text-[#64748B] mb-6">Schildern Sie kurz Ihre Aufgabenstellung — wir melden uns zeitnah.</p>
 
               <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -171,14 +171,14 @@ export default function Kontakt() {
                   <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">Ihre Aufgabenstellung *</label>
                   <textarea
                     rows={5}
-                    placeholder="Bitte schildern Sie kurz, womit wir Ihnen helfen kÃ¶nnen..."
+                    placeholder="Bitte schildern Sie kurz, womit wir Ihnen helfen können..."
                     className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors resize-none"
                   />
                 </div>
                 <div className="flex items-start gap-2">
                   <input type="checkbox" id="dsgvo" className="mt-1 accent-[#1E6FD9]" />
                   <label htmlFor="dsgvo" className="text-xs text-[#64748B] leading-relaxed">
-                    Ich habe die <a href="/datenschutz" className="text-[#1E6FD9] hover:underline">DatenschutzerklÃ¤rung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
+                    Ich habe die <a href="/datenschutz" className="text-[#1E6FD9] hover:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
                   </label>
                 </div>
                 <button

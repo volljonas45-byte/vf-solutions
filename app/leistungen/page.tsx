@@ -1,9 +1,9 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { LEISTUNGEN, USPS } from "@/lib/data";
 
 export const metadata = {
   title: "Leistungen | vf solutions",
-  description: "CAD/PDM/ERP-Beratung, SystemeinfÃ¼hrung, Anwendungsentwicklung, Migration und Schulung fÃ¼r den Maschinenbau.",
+  description: "CAD/PDM/ERP-Beratung, Systemeinführung, Anwendungsentwicklung, Migration und Schulung für den Maschinenbau.",
 };
 
 export default function Leistungen() {
@@ -18,8 +18,8 @@ export default function Leistungen() {
               Beratung, Umsetzung und Stabilisierung aus einer Hand
             </h1>
             <p className="text-[#94A3B8] text-lg leading-relaxed">
-              Der Fokus liegt auf tragfÃ¤higen Prozessen, klarer Systemlogik und realistischer Umsetzung
-              im laufenden technischen Betrieb â€” ohne signifikante StÃ¶rung des TagesgeschÃ¤fts.
+              Der Fokus liegt auf tragfähigen Prozessen, klarer Systemlogik und realistischer Umsetzung
+              im laufenden technischen Betrieb — ohne signifikante Störung des Tagesgeschäfts.
             </p>
           </div>
         </div>
@@ -65,9 +65,9 @@ export default function Leistungen() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { title: "Overhead-freie Honorarkalkulation", desc: "Keine versteckten Gemeinkosten, keine aufgeblÃ¤hten TagessÃ¤tze. Sie zahlen fÃ¼r tatsÃ¤chliche Leistung." },
-              { title: "All-in-TagessÃ¤tze oder Festpreise", desc: "Klare Abrechnung ohne Ãœberraschungen â€” generell all-in-TagessÃ¤tze oder projektbezogene Festpreise." },
-              { title: "Flexible RahmenvertrÃ¤ge", desc: "Flexibel handhabbare RahmenvertrÃ¤ge nach Bedarf â€” angepasst an Ihr Projekt und Ihre Organisation." },
+              { title: "Overhead-freie Honorarkalkulation", desc: "Keine versteckten Gemeinkosten, keine aufgeblähten Tagessätze. Sie zahlen für tatsächliche Leistung." },
+              { title: "All-in-Tagessätze oder Festpreise", desc: "Klare Abrechnung ohne Überraschungen — generell all-in-Tagessätze oder projektbezogene Festpreise." },
+              { title: "Flexible Rahmenverträge", desc: "Flexibel handhabbare Rahmenverträge nach Bedarf — angepasst an Ihr Projekt und Ihre Organisation." },
             ].map((item) => (
               <div key={item.title} className="bg-white border border-[#E2E8F0] rounded-xl p-6 text-center">
                 <div className="w-10 h-10 bg-[#EEF4FF] rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -87,7 +87,7 @@ export default function Leistungen() {
       <section className="bg-[#0A1628] py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-black text-white mb-4">Wie sieht Ihre Aufgabenstellung aus?</h2>
-          <p className="text-[#64748B] mb-8">Ein direktes GesprÃ¤ch klÃ¤rt meist schnell, wie vf solutions helfen kann.</p>
+          <p className="text-[#64748B] mb-8">Ein direktes Gespräch klärt meist schnell, wie vf solutions helfen kann.</p>
           <Link href="/kontakt" className="inline-flex items-center gap-2 bg-[#1E6FD9] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#1a5fc4] transition-colors">
             Jetzt Kontakt aufnehmen
           </Link>
