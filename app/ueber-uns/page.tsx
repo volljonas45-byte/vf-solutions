@@ -122,53 +122,69 @@ export default function UeberUns() {
         </div>
       </section>
 
-      {/* KARRIERE TIMELINE */}
+      {/* KARRIERE */}
       <section className="section bg-[#0A1628] border-y border-white/8">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <div>
-              <span className="block w-8 h-px bg-[#1E6FD9] mb-6" />
-              <h2 className="text-2xl font-bold text-white mb-4">35 Jahre Erfahrung</h2>
-              <p className="text-[#475569] text-sm leading-relaxed">
-                Der Werdegang von Volker Freundt — von der Erstausbildung über industrielle Praxis bis zur unabhängigen Beratung.
-              </p>
-            </div>
+          <div className="mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-3 block">Werdegang</span>
+            <h2 className="text-3xl font-black text-white mb-3">35 Jahre — 6 Stationen</h2>
+            <p className="text-[#475569] text-sm max-w-lg">
+              Von der Erstausbildung über industrielle Praxis bis zur unabhängigen Beratung.
+            </p>
+          </div>
 
-            <div className="lg:col-span-2">
-              <div className="relative">
-                <div className="absolute top-1 bottom-1 w-px" style={{left: "72px", background: "linear-gradient(to bottom, #1E6FD9 70%, #C8A96E)"}} />
-                <div className="space-y-0">
-                  {KARRIERE.map((item, i) => {
-                    const isCurrent = i === KARRIERE.length - 1;
-                    return (
-                      <div key={i} className="flex gap-6 pb-8 last:pb-0 relative">
-                        <div className="w-[72px] shrink-0 text-right pt-0.5">
-                          <span className={`text-xs font-mono font-bold leading-snug block ${isCurrent ? "text-[#C8A96E]" : "text-[#1E6FD9]"}`}>
-                            {item.year}
-                          </span>
-                        </div>
-                        <div className="relative pl-5">
-                          <div
-                            className={`absolute top-[4px] w-3 h-3 rounded-full border-2 ${isCurrent ? "border-[#C8A96E] bg-[#C8A96E]" : "border-[#1E6FD9] bg-[#0A1628]"}`}
-                            style={{left: "-6px"}}
-                          />
-                          {isCurrent && (
-                            <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#C8A96E] bg-[#C8A96E]/10 border border-[#C8A96E]/25 px-2 py-0.5 rounded-full mb-1.5">
-                              <span className="w-1.5 h-1.5 bg-[#C8A96E] rounded-full animate-pulse" />
-                              Heute
-                            </span>
-                          )}
-                          <h3 className={`text-sm font-semibold leading-tight ${isCurrent ? "text-white" : "text-[#94A3B8]"}`}>{item.title}</h3>
-                          {item.desc && (
-                            <p className={`text-xs mt-0.5 leading-relaxed ${isCurrent ? "text-[#64748B]" : "text-[#475569]"}`}>{item.desc}</p>
-                          )}
-                        </div>
-                      </div>
-                    );
-                  })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {KARRIERE.map((item, i) => {
+              const isCurrent = i === KARRIERE.length - 1;
+              const ghostYear = item.year.replace(/\s/g, "").replace(/[^0-9]/g, "").slice(-4);
+              return (
+                <div
+                  key={i}
+                  className={`relative rounded-xl p-6 overflow-hidden transition-all group ${
+                    isCurrent
+                      ? "bg-[#1A2F4E] border border-[#C8A96E]/40 hover:border-[#C8A96E]/70"
+                      : "bg-[#0D1F3C] border border-white/8 hover:border-[#1E6FD9]/30"
+                  }`}
+                >
+                  {/* Ghost year background */}
+                  <div
+                    className={`absolute -bottom-3 -right-2 text-8xl font-black select-none pointer-events-none leading-none ${
+                      isCurrent ? "text-[#C8A96E]/10" : "text-[#1E6FD9]/8"
+                    }`}
+                  >
+                    {ghostYear}
+                  </div>
+                  {/* Left accent bar */}
+                  <div
+                    className={`absolute left-0 top-4 bottom-4 w-[3px] rounded-r ${
+                      isCurrent ? "bg-[#C8A96E]" : "bg-[#1E6FD9]/40 group-hover:bg-[#1E6FD9]/80"
+                    } transition-colors`}
+                  />
+
+                  <div className="relative pl-2">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className={`text-[10px] font-mono font-bold tracking-widest ${isCurrent ? "text-[#C8A96E]" : "text-[#1E6FD9]"}`}>
+                        {item.year}
+                      </span>
+                      {isCurrent && (
+                        <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#C8A96E] bg-[#C8A96E]/10 border border-[#C8A96E]/25 px-2 py-0.5 rounded-full">
+                          <span className="w-1.5 h-1.5 bg-[#C8A96E] rounded-full animate-pulse" />
+                          Heute
+                        </span>
+                      )}
+                    </div>
+                    <h3 className={`text-sm font-bold leading-tight mb-1 ${isCurrent ? "text-white" : "text-[#94A3B8] group-hover:text-white"} transition-colors`}>
+                      {item.title}
+                    </h3>
+                    {item.desc && (
+                      <p className={`text-xs leading-relaxed ${isCurrent ? "text-[#64748B]" : "text-[#475569]"}`}>
+                        {item.desc}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
