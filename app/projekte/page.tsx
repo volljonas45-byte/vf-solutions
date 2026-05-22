@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
-import { PROJEKTBEREICHE, REFERENZKUNDEN } from "@/lib/data";
+import { PROJEKTBEREICHE, REFERENZKUNDEN, REFERENZKUNDEN_DOMAINS } from "@/lib/data";
+import LogoCell from "@/components/LogoCell";
 
 export const metadata = {
   title: "Projekte & Referenzkunden | vf solutions",
@@ -95,17 +96,9 @@ export default function Projekte() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {REFERENZKUNDEN.map((name, i) => (
-              <div
-                key={name}
-                className="bg-[#0D1F3C] border border-white/10 rounded-lg px-4 py-3 flex items-center gap-3 hover:bg-[#122040] transition-colors group"
-              >
-                <div className="w-6 h-6 rounded bg-[#1E6FD9]/10 border border-[#1E6FD9]/20 flex items-center justify-center shrink-0">
-                  <span className="text-[#1E6FD9] text-xs font-mono font-bold">{String(i + 1).padStart(2, "0")}</span>
-                </div>
-                <span className="text-[#94A3B8] text-sm font-medium group-hover:text-white transition-colors leading-tight">{name}</span>
-              </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-white/5 border border-white/8 overflow-hidden">
+            {REFERENZKUNDEN.map((name) => (
+              <LogoCell key={name} name={name} domain={REFERENZKUNDEN_DOMAINS[name]} />
             ))}
           </div>
         </div>

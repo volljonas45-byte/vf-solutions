@@ -122,6 +122,37 @@ export const PROJEKTBEREICHE = [
   },
 ];
 
+// Domain mapping for logo lookup via Clearbit Logo API
+// Falls back to text if logo not found
+export const REFERENZKUNDEN_DOMAINS: Record<string, string> = {
+  "WIPOTEC GmbH": "wipotec.com",
+  "OptoPrecision GmbH": "optoprecision.de",
+  "EHLEBRACHT Holding AG": "ehlebracht.de",
+  "Robert Bosch Packaging Technology GmbH": "boschpackaging.com",
+  "Alexander Binzel Schweisstechnik GmbH & Co. KG": "binzel-abicor.com",
+  "Wemhöner Surface Technologies GmbH & Co. KG": "wemhoener.de",
+  "MIWE Michael Wenz GmbH": "miwe.de",
+  "ERNI Deutschland GmbH": "erni.com",
+  "Silony Medical GmbH": "silony-medical.com",
+  "Hinterkopf GmbH": "hinterkopf.de",
+  "ZAHORANSKY Systemtechnik GmbH": "zahoransky.com",
+  "S. Siedle & Söhne Telefon- und Telegrafenwerke OHG": "siedle.de",
+  "Bühler GmbH": "buhlergroup.com",
+  "viastore systems GmbH": "viastore.com",
+  "teamtechnik Maschinen und Anlagen GmbH": "teamtechnik.de",
+  "RENA Sondermaschinenbau GmbH": "rena.com",
+  "pro med instruments GmbH": "pro-med-instruments.com",
+  "Adolf ILLIG Maschinenbau GmbH & Co. KG": "illig.com",
+  "INTRAVIS GmbH": "intravis.de",
+  "SEW-EURODRIVE GmbH & Co. KG": "sew-eurodrive.com",
+  "NEOPERL GmbH": "neoperl.com",
+  "Scheuerle Fahrzeugfabrik GmbH": "scheuerle.com",
+  "KAMAG Transporttechnik GmbH": "kamag.de",
+  "Eugen FAHRION GmbH & Co. KG": "fahrion.de",
+  "Novotechnik Messwertaufnehmer OHG": "novotechnik.com",
+  "weil engineering gmbh": "weil-engineering.com",
+};
+
 export const REFERENZKUNDEN = [
   "WIPOTEC GmbH",
   "OptoPrecision GmbH",

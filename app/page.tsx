@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { STATS, LEISTUNGEN, USPS, REFERENZKUNDEN, CONTACT } from "@/lib/data";
+import { STATS, LEISTUNGEN, USPS, REFERENZKUNDEN, REFERENZKUNDEN_DOMAINS, CONTACT } from "@/lib/data";
+import LogoCell from "@/components/LogoCell";
 
 export default function Home() {
   const featuredRefs = REFERENZKUNDEN.slice(0, 24);
@@ -216,14 +217,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px bg-white/5 border border-white/8 overflow-hidden">
             {featuredRefs.map((name) => (
-              <div
-                key={name}
-                className="bg-[#0D1F3C]/70 hover:bg-[#122040] px-4 py-5 flex items-center justify-center transition-colors"
-              >
-                <span className="text-[#64748B] hover:text-[#94A3B8] text-xs font-medium text-center leading-tight transition-colors">
-                  {name}
-                </span>
-              </div>
+              <LogoCell key={name} name={name} domain={REFERENZKUNDEN_DOMAINS[name]} />
             ))}
           </div>
         </div>
