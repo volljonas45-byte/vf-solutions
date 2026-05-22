@@ -240,7 +240,7 @@ export const KARRIERE = [
 ];
 
 export const PARTNER = [
-  { name: "GULP", desc: "Wichtigste Quelle für IT-Projektvermittlung im deutschsprachigen Raum" },
-  { name: "Harvey Nash", desc: "Deckung temporären Bedarfs an IT-Fachkräften, schnell und qualitativ hochwertig" },
-  { name: "HAYS", desc: "Weltweite Rekrutierung kompetenter IT-Spezialisten für zeitlich begrenzte Einsätze" },
+  { name: "GULP", domain: "gulp.de", url: "https://www.gulp.de", desc: "Wichtigste Quelle für IT-Projektvermittlung im deutschsprachigen Raum" },
+  { name: "Harvey Nash", domain: "harveynash.com", url: "https://www.harveynash.de", desc: "Deckung temporären Bedarfs an IT-Fachkräften, schnell und qualitativ hochwertig" },
+  { name: "HAYS", domain: "hays.de", url: "https://www.hays.de", desc: "Weltweite Rekrutierung kompetenter IT-Spezialisten für zeitlich begrenzte Einsätze" },
 ];

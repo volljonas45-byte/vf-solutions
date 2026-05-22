@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { KARRIERE, PARTNER, CONTACT } from "@/lib/data";
+import PartnerCard from "@/components/PartnerCard";
 
 export const metadata = {
   title: "Über vf solutions | Volker Freundt",
@@ -122,33 +123,49 @@ export default function UeberUns() {
       </section>
 
       {/* KARRIERE TIMELINE */}
-      <section className="section bg-white border-b border-[#E5E7EB]">
+      <section className="section bg-[#0A1628] border-y border-white/8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div>
-              <span className="rule-blue" />
-              <h2 className="text-2xl font-bold text-[#0A1628] mb-4">35 Jahre Erfahrung</h2>
-              <p className="text-[#6B7280] text-sm leading-relaxed">
+              <span className="block w-8 h-px bg-[#1E6FD9] mb-6" />
+              <h2 className="text-2xl font-bold text-white mb-4">35 Jahre Erfahrung</h2>
+              <p className="text-[#475569] text-sm leading-relaxed">
                 Der Werdegang von Volker Freundt — von der Erstausbildung über industrielle Praxis bis zur unabhängigen Beratung.
               </p>
             </div>
 
             <div className="lg:col-span-2">
               <div className="relative">
-                <div className="absolute top-0 bottom-0 w-px bg-[#E5E7EB]" style={{left: "72px"}} />
+                <div className="absolute top-1 bottom-1 w-px" style={{left: "72px", background: "linear-gradient(to bottom, #1E6FD9 70%, #C8A96E)"}} />
                 <div className="space-y-0">
-                  {KARRIERE.map((item, i) => (
-                    <div key={i} className="flex gap-6 pb-7 last:pb-0 relative">
-                      <div className="w-[72px] shrink-0 text-right pt-0.5">
-                        <span className="text-xs font-mono font-semibold text-[#1E6FD9]">{item.year}</span>
+                  {KARRIERE.map((item, i) => {
+                    const isCurrent = i === KARRIERE.length - 1;
+                    return (
+                      <div key={i} className="flex gap-6 pb-8 last:pb-0 relative">
+                        <div className="w-[72px] shrink-0 text-right pt-0.5">
+                          <span className={`text-xs font-mono font-bold leading-snug block ${isCurrent ? "text-[#C8A96E]" : "text-[#1E6FD9]"}`}>
+                            {item.year}
+                          </span>
+                        </div>
+                        <div className="relative pl-5">
+                          <div
+                            className={`absolute top-[4px] w-3 h-3 rounded-full border-2 ${isCurrent ? "border-[#C8A96E] bg-[#C8A96E]" : "border-[#1E6FD9] bg-[#0A1628]"}`}
+                            style={{left: "-6px"}}
+                          />
+                          {isCurrent && (
+                            <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#C8A96E] bg-[#C8A96E]/10 border border-[#C8A96E]/25 px-2 py-0.5 rounded-full mb-1.5">
+                              <span className="w-1.5 h-1.5 bg-[#C8A96E] rounded-full animate-pulse" />
+                              Heute
+                            </span>
+                          )}
+                          <h3 className={`text-sm font-semibold leading-tight ${isCurrent ? "text-white" : "text-[#94A3B8]"}`}>{item.title}</h3>
+                          {item.desc && (
+                            <p className={`text-xs mt-0.5 leading-relaxed ${isCurrent ? "text-[#64748B]" : "text-[#475569]"}`}>{item.desc}</p>
+                          )}
+                        </div>
                       </div>
-                      <div className="relative pl-5">
-                        <div className="absolute top-[5px] w-2.5 h-2.5 rounded-full border-2 border-[#1E6FD9] bg-white" style={{left: "-5px"}} />
-                        <h3 className="text-sm font-semibold text-[#111827] leading-tight">{item.title}</h3>
-                        {item.desc && <p className="text-xs text-[#6B7280] mt-0.5 leading-relaxed">{item.desc}</p>}
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -157,23 +174,20 @@ export default function UeberUns() {
       </section>
 
       {/* PARTNER */}
-      <section className="section bg-[#F7F8FA]">
+      <section className="section bg-[#0D1F3C] border-b border-white/8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div>
-              <span className="rule-blue" />
-              <h2 className="text-2xl font-bold text-[#0A1628] mb-4">Partner-Netzwerk</h2>
-              <p className="text-[#6B7280] text-sm leading-relaxed">
+              <span className="block w-8 h-px bg-[#1E6FD9] mb-6" />
+              <h2 className="text-2xl font-bold text-white mb-4">Partner-Netzwerk</h2>
+              <p className="text-[#475569] text-sm leading-relaxed">
                 Erfolgreiche Projekte stemmt man selten im Alleingang. Ein Kooperationsverbund
                 erweitert das Know-How und sichert Kapazitätsreserven.
               </p>
             </div>
-            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {PARTNER.map((p) => (
-                <div key={p.name} className="bg-white border border-[#E5E7EB] p-6">
-                  <div className="text-xl font-bold text-[#0A1628] mb-2">{p.name}</div>
-                  <p className="text-sm text-[#6B7280] leading-relaxed">{p.desc}</p>
-                </div>
+                <PartnerCard key={p.name} {...p} />
               ))}
             </div>
           </div>
