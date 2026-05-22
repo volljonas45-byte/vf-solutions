@@ -33,8 +33,8 @@ export default function Kontakt() {
             <div>
               <div className="bg-white border border-[#E2E8F0] rounded-xl p-8 mb-6">
                 <div className="flex items-start gap-4 mb-6 pb-6 border-b border-[#E2E8F0]">
-                  <div className="w-12 h-12 rounded-lg bg-[#EEF4FF] flex items-center justify-center shrink-0">
-                    <span className="text-[#1E6FD9] font-black text-sm">VF</span>
+                  <div className="h-12 px-3 rounded-lg bg-white border border-[#E2E8F0] flex items-center justify-center shrink-0">
+                    <img src="/vf-solutions/images/logo-vf.png" alt="vf solutions" className="h-8 w-auto object-contain" />
                   </div>
                   <div>
                     <h2 className="font-bold text-[#0A1628]">{CONTACT.name}</h2>
