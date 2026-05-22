@@ -104,14 +104,18 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Image */}
-            <div className="hidden lg:block relative min-h-[360px]">
-              <img
-                src="/vf-solutions/images/factory-cad.jpg"
-                alt="Präzision in der Praxis"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[#0A1628]/20" />
+            {/* Placeholder – Foto hier einfügen */}
+            <div className="hidden lg:flex relative min-h-[360px] items-center justify-center bg-[#F7F8FA]">
+              <div className="text-center select-none">
+                <div className="w-14 h-14 border-2 border-dashed border-[#D1D5DB] rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" strokeWidth="1.5" strokeLinecap="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M21 15l-5-5L5 21"/>
+                  </svg>
+                </div>
+                <p className="text-[#C4C9D4] text-xs tracking-wide">Foto folgt</p>
+              </div>
             </div>
           </div>
         </div>
