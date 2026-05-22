@@ -238,10 +238,10 @@ export default function Home() {
               Ein direktes Gespräch klärt meist schnell, ob und wie vf solutions helfen kann.
             </p>
           </div>
-          <div className="flex gap-3 shrink-0">
+          <div className="flex flex-wrap gap-3 shrink-0">
             <a
               href={`tel:${CONTACT.telHref}`}
-              className="flex items-center gap-2 border border-white/20 text-[#94A3B8] hover:text-white hover:border-white/40 px-5 py-2.5 text-sm transition-colors"
+              className="inline-flex items-center gap-2 border border-white/30 rounded-md text-[#94A3B8] hover:text-white hover:border-white/60 hover:bg-white/5 px-5 py-2.5 text-sm transition-colors whitespace-nowrap"
             >
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.04 11.04 0 005.105 5.105l.773-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V13a1 1 0 01-1 1h-1C7.82 14 2 8.18 2 4V3z" fill="currentColor"/>
@@ -250,7 +250,7 @@ export default function Home() {
             </a>
             <Link
               href="/kontakt"
-              className="bg-[#1E6FD9] text-white px-5 py-2.5 text-sm font-semibold hover:bg-[#1a5fc4] transition-colors"
+              className="inline-flex items-center bg-[#1E6FD9] text-white rounded-md px-5 py-2.5 text-sm font-semibold hover:bg-[#1a5fc4] transition-colors whitespace-nowrap"
             >
               Kontakt aufnehmen
             </Link>
