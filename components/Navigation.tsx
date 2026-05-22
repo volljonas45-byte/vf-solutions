@@ -18,13 +18,13 @@ export default function Navigation() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-[#E5E7EB]" style={{backdropFilter: "blur(12px)"}}>
-      <div className="max-w-7xl mx-auto px-6 h-[60px] flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-[70px] flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <img
             src="/vf-solutions/images/logo-vf.png"
             alt="vf solutions"
-            className="h-[36px] w-auto object-contain"
+            className="h-[52px] w-auto object-contain"
           />
         </Link>
 
