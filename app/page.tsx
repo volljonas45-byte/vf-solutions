@@ -12,9 +12,9 @@ export default function Home() {
         {/* Background photo */}
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/hero-industry.jpg"
+            src="/vf-solutions/images/hero-machining.jpg"
             alt=""
-            className="w-full h-full object-cover object-center opacity-40"
+            className="w-full h-full object-cover object-center opacity-35"
           />
           <div className="absolute inset-0 photo-overlay-dark" />
         </div>
