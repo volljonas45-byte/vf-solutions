@@ -20,15 +20,12 @@ export default function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-[#E5E7EB]" style={{backdropFilter: "blur(12px)"}}>
       <div className="max-w-7xl mx-auto px-6 h-[60px] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex items-center">
-            <span className="text-xl font-bold text-[#0A1628] tracking-tight">vf</span>
-            <span className="text-xl font-light text-[#1E6FD9] tracking-tight">solutions</span>
-          </div>
-          <div className="hidden sm:flex flex-col ml-2 pl-3 border-l border-[#E5E7EB]">
-            <span className="text-[9.5px] font-medium text-[#9CA3AF] uppercase tracking-[0.15em] leading-tight">CAD · PDM · ERP</span>
-            <span className="text-[9.5px] text-[#9CA3AF] uppercase tracking-[0.15em] leading-tight">Beratung</span>
-          </div>
+        <Link href="/" className="flex items-center">
+          <img
+            src="/vf-solutions/images/logo-vf.png"
+            alt="vf solutions"
+            className="h-[36px] w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}

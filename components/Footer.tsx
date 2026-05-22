@@ -8,9 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl font-black text-white tracking-tight">vf</span>
-              <span className="text-2xl font-light text-[#1E6FD9] tracking-tight ml-0.5">solutions</span>
+            <div className="mb-4">
+              <img
+                src="/vf-solutions/images/logo-vf.png"
+                alt="vf solutions"
+                className="h-[42px] w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-[#94A3B8] text-sm leading-relaxed max-w-xs">
               CAD/PDM/ERP-Beratung für Unternehmen des Maschinen- und Anlagenbaus.
