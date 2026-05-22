@@ -13,11 +13,11 @@ export default function LogoCell({ name, domain }: LogoCellProps) {
     <div className="bg-[#0D1F3C]/70 hover:bg-[#122040] px-4 py-5 flex items-center gap-3 transition-colors group min-h-[68px]">
       {domain && !iconFailed && (
         <img
-          src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`}
+          src={`https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=256`}
           alt=""
-          width={32}
-          height={32}
-          className="w-8 h-8 object-contain rounded opacity-60 group-hover:opacity-90 transition-opacity shrink-0"
+          width={36}
+          height={36}
+          className="w-9 h-9 object-contain rounded opacity-65 group-hover:opacity-95 transition-opacity shrink-0"
           onError={() => setIconFailed(true)}
         />
       )}

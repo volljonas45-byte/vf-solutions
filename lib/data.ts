@@ -128,7 +128,7 @@ export const REFERENZKUNDEN_DOMAINS: Record<string, string> = {
   "WIPOTEC GmbH": "wipotec.com",
   "OptoPrecision GmbH": "optoprecision.de",
   "EHLEBRACHT Holding AG": "ehlebracht.de",
-  "Robert Bosch Packaging Technology GmbH": "boschpackaging.com",
+  "Robert Bosch Packaging Technology GmbH": "syntegon.com",
   "Alexander Binzel Schweisstechnik GmbH & Co. KG": "binzel-abicor.com",
   "Wemhöner Surface Technologies GmbH & Co. KG": "wemhoener.de",
   "MIWE Michael Wenz GmbH": "miwe.de",
