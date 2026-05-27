@@ -70,22 +70,6 @@ export default async function Kontakt({
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-md bg-[#F8F9FB] flex items-center justify-center shrink-0">
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M7 1C4.79 1 3 2.79 3 5c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4z" stroke="#64748B" strokeWidth="1.2" fill="none"/>
-                        <circle cx="7" cy="5" r="1.2" fill="#64748B"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs text-[#94A3B8] uppercase tracking-wide mb-0.5">
-                        {tr.kontakt.addressLabel}
-                      </p>
-                      <p className="text-sm text-[#1A2332]">{CONTACT.address}</p>
-                      <p className="text-sm text-[#1A2332]">{CONTACT.city}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-md bg-[#F8F9FB] flex items-center justify-center shrink-0">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M1.5 2.5a.5.5 0 01.5-.5h2.17a.5.5 0 01.49.4l.65 3.26a.5.5 0 01-.27.53l-1.07.53a7.5 7.5 0 003.76 3.76l.53-1.07a.5.5 0 01.53-.27l3.26.65a.5.5 0 01.4.49V11.5a.5.5 0 01-.5.5H10.5A9 9 0 011.5 3.5v-1z" stroke="#64748B" strokeWidth="1.2" fill="none"/>
                       </svg>
                     </div>
@@ -139,27 +123,6 @@ export default async function Kontakt({
                 </div>
               </div>
 
-              {/* Map link */}
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT.address + ", " + CONTACT.city)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-white border border-[#E2E8F0] rounded-xl p-4 hover:border-[#1E6FD9]/40 transition-colors group"
-              >
-                <div className="w-10 h-10 bg-[#EEF4FF] rounded-lg flex items-center justify-center shrink-0">
-                  <svg className="text-[#1E6FD9]" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <path d="M9 1.5C6.24 1.5 4 3.74 4 6.5c0 4.25 5 10 5 10s5-5.75 5-10c0-2.76-2.24-5-5-5z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <circle cx="9" cy="6.5" r="1.5" fill="currentColor"/>
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-[#0A1628]">{tr.kontakt.mapsLink}</p>
-                  <p className="text-xs text-[#94A3B8]">{CONTACT.address}, {CONTACT.city}</p>
-                </div>
-                <svg className="text-[#94A3B8] group-hover:text-[#1E6FD9] transition-colors" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
             </div>
 
             {/* Kontaktformular */}
