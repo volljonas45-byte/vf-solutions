@@ -239,83 +239,64 @@ export const USPS: Record<Locale, { icon: string; title: string; desc: string }[
   ],
 };
 
-export const PROJEKTBEREICHE: Record<Locale, {
+export type ProjektFeature = {
   tag: string;
   title: string;
   count: string;
-  desc: string;
-  vorgehen: string;
-  nutzen: string;
+  paragraphs: string[];
+  ctaQuestion: string;
   highlight?: boolean;
-}[]> = {
+};
+
+export const PROJEKT_FEATURES: Record<Locale, ProjektFeature[]> = {
   de: [
     {
       tag: "MIGRATION",
-      title: "CAD/PDM-Migration",
+      title: "PDM-Systemwechsel",
       count: "Schwerpunkt · Löwenanteil",
-      desc: "Den größten Tätigkeitsbereich bilden Datenmigrationen zwischen CAD- und PDM-Systemen — typischerweise bei einem Systemwechsel oder einer technischen Modernisierung.",
-      vorgehen: "Iststandsaufnahme der Datenbestände, Definition der Zielstruktur, Aufbereitung und Konvertierung, schrittweise Übernahme inkl. Koexistenzphase und Konsistenzprüfung.",
-      nutzen: "Saubere Datenstrukturen im Zielsystem, nachvollziehbare Versionslogik und ein sicherer Betrieb der Altdaten während der Umstellung.",
+      paragraphs: [
+        "Viele PDM-Systemwechsel werden meist durch technologische Veraltung, mangelnde CAD-Kompatibilität, funktionale Prozessdefizite sowie strategische Konsolidierungen oder hohe Betriebskosten (TCO) ausgelöst – oft direkt getrieben durch einen parallelen Wechsel des führenden CAD-Systems.",
+        "Die anstehende Datenmigration fungiert hierbei als zentrales Werkzeug, um die historischen Datenbestände zu bereinigen, Dubletten zu eliminieren und die Altdaten strukturiert und termingerecht in das neue Zielsystem zu überführen.",
+        "vf solutions bietet Ihnen kompetente Unterstützung durch maßgeschneiderte Migrationstools zur Erfassung, Bewertung, Korrektur und Vorbereitung Ihrer CAD-Datenbestände samt verknüpften Artikelstämmen und Stücklisten für den sicheren Transfer in das neue Zielsystem.",
+      ],
+      ctaQuestion: "Wie sieht Ihre konkrete Aufgabenstellung aus?",
       highlight: true,
     },
     {
-      tag: "CAD & PDM",
-      title: "CAD/PDM-Systemoptimierung",
-      count: "30+ Systemwechsel",
-      desc: "Gewachsene CAD- und PDM-Strukturen, uneinheitliche Abläufe oder ein geplanter CAD-Systemwechsel erschweren die tägliche Arbeit.",
-      vorgehen: "Analyse der Systemnutzung, Systemauswahl, Klärung von Datenmodellen, Sachnummernlogik und Einführungskonzepten.",
-      nutzen: "Klarere Ablage, nachvollziehbarere Konstruktionsdaten und stabilere CAD/PDM-Anwendung im laufenden Betrieb.",
-    },
-    {
-      tag: "Daten & Integration",
-      title: "Schnittstellen & Datenstrukturprojekte",
-      count: "18+ Integrationsprojekte",
-      desc: "PDM-Archivierung oder Schnittstellen zwischen Konstruktion und nachgelagerten Systemen erfordern konsistente Strukturen und klare Verantwortlichkeiten.",
-      vorgehen: "Konzeption von Datenflüssen, Migrationslogik, API-Entwicklung sowie Anwender- und Key-User-Begleitung.",
-      nutzen: "Bessere Datenqualität, verständlichere Integrationslogik und höhere Prozesssicherheit.",
-    },
-    {
-      tag: "Klassifizierung",
-      title: "Sachnummernsysteme & Klassifizierung",
-      count: "5+ Klassifizierungsprojekte",
-      desc: "In vielen Konstruktionsabteilungen entstehen unnötig Neuteile, weil Wiederholteile und Ähnlichteile nicht auffindbar sind.",
-      vorgehen: "Iststandsanalyse, Entwicklung und Implementierung klassifizierungsbasierender Sachnummernsysteme mit Sachmerkmalsleisten.",
-      nutzen: "Weniger Neukonstruktionen, bessere Teilewiederverwendung und strukturiertes Änderungsmanagement.",
+      tag: "DEV",
+      title: "Anwendungsentwicklung",
+      count: "CAx · Schnittstellen · Konverter",
+      paragraphs: [
+        "Die anwendungsorientierte Entwicklung kundenspezifischer Lösungen stellt sich trotz hohem Angebot an Standardsoftware meist als ideal heraus – schließlich lassen sich Ihre Anforderungen eher selten standardisieren …",
+        "vf solutions entwickelt professionelle Lösungen für Ihre Anforderungen aus dem CAx-Umfeld: Schnittstellen, Konverter, Migrations-Tools, CAD/PPS/ERP-Kopplungen, CAD/PDM-Lösungen, CAD/PDM/Archiv-Integrationen, Teilegeneratoren sowie Varianten- und Berechnungsmodule werden nicht nur realisiert, sondern auch eingeführt und ständig optimiert.",
+        "Weitere Schwerpunkte stellen Konzeption, Entwicklung und Einführung von Datenbanken sowie die Realisierung komplexer integrierter Anwendungen dar – sehen Sie Ansatzpunkte in Ihrem Unternehmen?",
+      ],
+      ctaQuestion: "Wie sieht Ihre konkrete Aufgabenstellung aus?",
     },
   ],
   en: [
     {
       tag: "MIGRATION",
-      title: "CAD/PDM migration",
+      title: "PDM system migration",
       count: "Core focus · largest share",
-      desc: "The largest single area of work: data migrations between CAD and PDM systems — typically during a system change or technical modernization.",
-      vorgehen: "Assessment of existing data, definition of the target structure, cleansing and conversion, stepwise handover including a coexistence phase and consistency checks.",
-      nutzen: "Clean data structures in the target system, traceable versioning logic and safe operation of legacy data throughout the transition.",
+      paragraphs: [
+        "Most PDM system migrations are triggered by technological obsolescence, lack of CAD compatibility, functional process gaps, strategic consolidation or high total cost of ownership (TCO) — and are often driven directly by a parallel switch of the leading CAD system.",
+        "The associated data migration is the central tool for cleansing the historical data, eliminating duplicates and transferring the legacy data into the new target system in a structured and on-schedule manner.",
+        "vf solutions provides expert support through tailor-made migration tools to capture, assess, correct and prepare your CAD data — including the connected item masters and bills of materials — for a safe transfer into the new target system.",
+      ],
+      ctaQuestion: "What does your specific challenge look like?",
       highlight: true,
     },
     {
-      tag: "CAD & PDM",
-      title: "CAD/PDM system optimization",
-      count: "30+ system migrations",
-      desc: "Grown CAD and PDM environments, inconsistent workflows or a planned CAD system change make day-to-day engineering harder than it should be.",
-      vorgehen: "Analysis of system usage, system selection, clarification of data models, part numbering logic and rollout concepts.",
-      nutzen: "Clearer data storage, more traceable engineering data and a more stable CAD/PDM environment in daily operation.",
-    },
-    {
-      tag: "Data & integration",
-      title: "Interfaces & data structure projects",
-      count: "18+ integration projects",
-      desc: "PDM archiving or interfaces between engineering and downstream systems require consistent structures and clear responsibilities.",
-      vorgehen: "Design of data flows, migration logic, API development and support for end users and key users.",
-      nutzen: "Better data quality, more transparent integration logic and higher process reliability.",
-    },
-    {
-      tag: "Classification",
-      title: "Part numbering & classification",
-      count: "5+ classification projects",
-      desc: "In many engineering departments, new parts are unnecessarily created because existing repeat or similar parts cannot be found.",
-      vorgehen: "Current-state analysis, design and implementation of classification-based part numbering systems with part characteristic structures.",
-      nutzen: "Fewer new designs, better part reuse and a structured change management process.",
+      tag: "DEV",
+      title: "Custom development",
+      count: "CAx · interfaces · converters",
+      paragraphs: [
+        "Application-oriented development of customer-specific solutions usually turns out to be the ideal approach despite the wide range of standard software — your requirements rarely lend themselves to standardization …",
+        "vf solutions develops professional solutions for your needs in the CAx environment: interfaces, converters, migration tools, CAD/PPS/ERP couplings, CAD/PDM solutions, CAD/PDM/archive integrations, part generators as well as variant and calculation modules are not only implemented but also rolled out and continuously optimized.",
+        "Further focus areas include the conception, development and rollout of databases as well as the delivery of complex integrated applications — do you see starting points in your organization?",
+      ],
+      ctaQuestion: "What does your specific challenge look like?",
     },
   ],
 };
@@ -395,30 +376,61 @@ export const REFERENZKUNDEN = [
 ];
 
 export const CAD_SYSTEME = [
-  "SolidWorks", "SolidEdge", "Inventor", "CATIA V5",
-  "Unigraphics V15/16/17", "AutoCAD", "DraftSight",
-  "ME10", "ObjectD / EUKLID", "Sigraph-CAD2D", "starVars-Designer",
+  "SolidWorks",
+  "Creo Parametric",
+  "CATIA V5",
+  "Inventor",
+  "DraftSight",
+  "SolidEdge",
+  "Unigraphics V15/16/17",
+  "AutoCAD",
+  "ME10",
+  "EUKLID-Design / ObjectD / Sigraph-Design",
+  "Sigraph-CAD2D",
 ];
 
 export const PDM_SYSTEME = [
-  "SAP PLM / Cideon Workspace", "SolidWorks PDM Professional",
-  "MaxxDB", "CIM Database / WSM", "SmarTeam", "CADIM EDB",
-  "PDMWorks", "IMAN / UGManager", "proALPHA", "keytech Pro",
+  "SAP PLM, ECTR, Cideon Workspace",
+  "CIM Database, WSM",
+  "Keytech",
+  "SolidWorks PDM",
+  "PDMWorks",
+  "PRO.FILE",
+  "MaxxDB",
+  "proALPHA",
+  "CADIM EDB",
+  "SmarTeam",
+  "IMAN / UGManager",
 ];
 
 export const PROGRAMMIERUNG = [
-  "Visual Basic / VBA", "VBS / VB.NET", "SQL", "C / C++", "AutoLISP",
+  "VB.NET, VBA, VBS",
+  "SQL",
+  "C, C++",
+  "AutoLISP",
 ];
 
 export const API_SYSTEME = [
-  "SAP BAPI / RFC", "SolidWorks API", "SolidWorks PDM API",
-  "SolidEdge API", "Inventor API", "Unigraphics API",
-  "MaxxDB V3 API", "PDMWorks API", "SmarTeam API",
-  "DraftSight API", "MS-Office API",
+  "SAP BAPI, RFC",
+  "SolidWorks",
+  "SolidWorks PDM",
+  "Creo Parametric",
+  "Inventor",
+  "DraftSight",
+  "MaxxDB V3",
+  "SolidEdge",
+  "PDMWorks",
+  "SmarTeam",
+  "Unigraphics",
+  "MS-Office",
 ];
 
 export const DATENBANKEN = [
-  "MS-SQL Server", "Oracle", "MySQL", "SQLite", "MS-Access",
+  "MS-SQL Server",
+  "Oracle",
+  "MySQL",
+  "SQLite",
+  "MS-Access",
 ];
 
 export const KARRIERE: Record<Locale, { year: string; title: string; desc?: string }[]> = {

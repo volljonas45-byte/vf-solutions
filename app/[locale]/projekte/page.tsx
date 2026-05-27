@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  PROJEKTBEREICHE,
+  PROJEKT_FEATURES,
   REFERENZKUNDEN,
   REFERENZKUNDEN_DOMAINS,
   LOCALES,
@@ -34,7 +34,7 @@ export default async function Projekte({
   if (!LOCALES.includes(rawLocale as Locale)) notFound();
   const locale = rawLocale as Locale;
   const tr = t(locale);
-  const bereiche = PROJEKTBEREICHE[locale];
+  const features = PROJEKT_FEATURES[locale];
 
   return (
     <>
@@ -63,68 +63,99 @@ export default async function Projekte({
         </div>
       </section>
 
-      {/* PROJEKTBEREICHE */}
+      {/* PROJEKT-FEATURES (2 full-width Blöcke) */}
       <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-14 max-w-3xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-3 block">
               {tr.projekte.areasEyebrow}
             </span>
             <h2 className="text-3xl font-black text-[#0A1628] tracking-tight">
               {tr.projekte.areasTitle}
             </h2>
-            <p className="text-[#4A5568] mt-3 max-w-xl mx-auto">
-              {tr.projekte.areasLead}
-            </p>
+            <p className="text-[#4A5568] mt-3">{tr.projekte.areasLead}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {bereiche.map((p) => (
+          <div className="space-y-8">
+            {features.map((f) => (
               <article
-                key={p.title}
-                className={`rounded-xl overflow-hidden card-hover ${
-                  p.highlight
-                    ? "border-2 border-[#C8A96E]/60 shadow-[0_4px_20px_rgba(200,169,110,0.18)]"
+                key={f.title}
+                className={`rounded-2xl overflow-hidden ${
+                  f.highlight
+                    ? "border-2 border-[#C8A96E]/60 shadow-[0_8px_30px_rgba(200,169,110,0.15)]"
                     : "border border-[#E2E8F0]"
                 }`}
               >
+                {/* Header */}
                 <div
-                  className={`px-6 py-4 flex items-center justify-between gap-4 flex-wrap ${
-                    p.highlight ? "bg-[#1A2F4E]" : "bg-[#0A1628]"
+                  className={`px-8 py-6 flex flex-wrap items-center justify-between gap-4 ${
+                    f.highlight ? "bg-[#1A2F4E]" : "bg-[#0A1628]"
                   }`}
                 >
-                  <h2 className="text-base font-bold text-white">{p.title}</h2>
-                  <div className="flex items-center gap-2 flex-wrap">
-                    {p.highlight && (
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <h3 className="text-xl font-bold text-white">{f.title}</h3>
+                    {f.highlight && (
                       <span className="text-[10px] font-semibold uppercase tracking-wider bg-[#C8A96E]/20 text-[#C8A96E] border border-[#C8A96E]/40 px-2 py-0.5 rounded">
                         {tr.projekte.focusBadge}
                       </span>
                     )}
-                    <span className="text-xs font-mono bg-[#1E6FD9]/20 text-[#93C5FD] border border-[#1E6FD9]/30 px-2 py-0.5 rounded">
-                      {p.tag}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs font-mono bg-[#1E6FD9]/20 text-[#93C5FD] border border-[#1E6FD9]/30 px-2.5 py-1 rounded">
+                      {f.tag}
                     </span>
-                    <span className={`text-xs font-medium ${p.highlight ? "text-[#C8A96E]" : "text-[#C8A96E]"}`}>
-                      {p.count}
-                    </span>
+                    <span className="text-xs font-medium text-[#C8A96E]">{f.count}</span>
                   </div>
                 </div>
-                <div className={`p-6 ${p.highlight ? "bg-gradient-to-br from-[#FFF7E5] to-[#FFFCF0]" : "bg-[#F8F9FB]"}`}>
-                  <p className="text-sm text-[#4A5568] mb-5 leading-relaxed italic border-l-2 border-[#E2E8F0] pl-3">
-                    {p.desc}
-                  </p>
-                  <div className="space-y-4">
-                    <div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-[#64748B] mb-1.5 block">
-                        {tr.projekte.vorgehen}
-                      </span>
-                      <p className="text-sm text-[#1A2332] leading-relaxed">{p.vorgehen}</p>
-                    </div>
-                    <div className="border-t border-[#E2E8F0] pt-4">
-                      <span className={`text-xs font-semibold uppercase tracking-wide mb-1.5 block ${p.highlight ? "text-[#A07E3A]" : "text-[#1E6FD9]"}`}>
-                        {tr.projekte.nutzen}
-                      </span>
-                      <p className="text-sm text-[#1A2332] leading-relaxed">{p.nutzen}</p>
-                    </div>
+
+                {/* Body */}
+                <div
+                  className={`p-8 md:p-10 ${
+                    f.highlight ? "bg-gradient-to-br from-[#FFF7E5] to-[#FFFCF0]" : "bg-[#F8F9FB]"
+                  }`}
+                >
+                  <div className="max-w-3xl space-y-5">
+                    {f.paragraphs.map((p, i) => (
+                      <p
+                        key={i}
+                        className={`text-[15px] leading-relaxed ${
+                          i === 0
+                            ? "text-[#0A1628] font-medium"
+                            : "text-[#374151]"
+                        }`}
+                      >
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-[#E2E8F0]/70 flex flex-wrap items-center justify-between gap-4">
+                    <p
+                      className={`text-base font-semibold ${
+                        f.highlight ? "text-[#A07E3A]" : "text-[#0A1628]"
+                      }`}
+                    >
+                      {f.ctaQuestion}
+                    </p>
+                    <Link
+                      href={`/${locale}/kontakt`}
+                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold transition-colors ${
+                        f.highlight
+                          ? "bg-[#C8A96E] text-white hover:bg-[#b59658]"
+                          : "bg-[#0A1628] text-white hover:bg-[#122040]"
+                      }`}
+                    >
+                      {tr.common.ctaContact}
+                      <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M2.5 7h9M8 3.5L11.5 7 8 10.5"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </article>
