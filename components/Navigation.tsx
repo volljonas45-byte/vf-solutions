@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { type Locale } from "@/lib/data";
 import { t } from "@/lib/i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navigation({ locale }: { locale: Locale }) {
   const pathname = usePathname();
@@ -18,17 +19,6 @@ export default function Navigation({ locale }: { locale: Locale }) {
     { href: `/${locale}/ueber-uns`, label: tr.nav.ueberUns },
     { href: `/${locale}/kontakt`, label: tr.nav.kontakt },
   ];
-
-  // Build a path on the other locale that mirrors the current path.
-  const otherLocale: Locale = locale === "de" ? "en" : "de";
-  const switchHref = (() => {
-    if (!pathname) return `/${otherLocale}`;
-    const segments = pathname.split("/").filter(Boolean);
-    // segments[0] is the current locale (or basePath strip already done by Next)
-    if (segments.length === 0) return `/${otherLocale}`;
-    segments[0] = otherLocale;
-    return "/" + segments.join("/");
-  })();
 
   const isActive = (href: string, exact?: boolean) => {
     if (exact) return pathname === href;
@@ -72,30 +62,7 @@ export default function Navigation({ locale }: { locale: Locale }) {
 
         {/* Language switcher + CTA + Mobile toggle */}
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center border border-[#E5E7EB] rounded-md overflow-hidden text-xs font-medium">
-            <Link
-              href={pathname?.replace(/^\/(de|en)/, "/de") || "/de"}
-              className={`px-2.5 py-1.5 transition-colors ${
-                locale === "de"
-                  ? "bg-[#0A1628] text-white"
-                  : "text-[#4B5563] hover:bg-[#F8F9FB]"
-              }`}
-              aria-current={locale === "de" ? "true" : undefined}
-            >
-              DE
-            </Link>
-            <Link
-              href={pathname?.replace(/^\/(de|en)/, "/en") || "/en"}
-              className={`px-2.5 py-1.5 transition-colors ${
-                locale === "en"
-                  ? "bg-[#0A1628] text-white"
-                  : "text-[#4B5563] hover:bg-[#F8F9FB]"
-              }`}
-              aria-current={locale === "en" ? "true" : undefined}
-            >
-              EN
-            </Link>
-          </div>
+          <LanguageSwitcher locale={locale} variant="header" />
 
           <Link
             href={`/${locale}/kontakt`}
@@ -152,14 +119,12 @@ export default function Navigation({ locale }: { locale: Locale }) {
               </Link>
             );
           })}
-          <div className="pt-3 border-t border-[#E2E8F0] flex gap-2">
-            <Link
-              href={switchHref}
-              onClick={() => setOpen(false)}
-              className="flex-1 text-center border border-[#E5E7EB] text-[#4A5568] px-4 py-2.5 rounded-md text-sm font-medium"
-            >
-              {locale === "de" ? "Switch to English" : "Auf Deutsch umschalten"}
-            </Link>
+          <div className="pt-3 border-t border-[#E2E8F0]">
+            <LanguageSwitcher
+              locale={locale}
+              variant="mobile"
+              onNavigate={() => setOpen(false)}
+            />
           </div>
           <div className="pt-2">
             <Link

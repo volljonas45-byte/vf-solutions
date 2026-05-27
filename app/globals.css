@@ -83,6 +83,26 @@ body {
   margin-bottom: 20px;
 }
 
+/* Language-switch transition: <main> fades softly while routing */
+main {
+  transition: opacity 220ms ease, filter 220ms ease;
+}
+
+body.lang-switching main {
+  opacity: 0.35;
+  filter: blur(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    transition: none;
+  }
+  body.lang-switching main {
+    opacity: 1;
+    filter: none;
+  }
+}
+
 /* Photo overlay helpers */
 .photo-overlay-dark {
   background: linear-gradient(to right, rgba(10, 22, 40, 0.96) 0%, rgba(10, 22, 40, 0.80) 50%, rgba(10, 22, 40, 0.30) 100%);
