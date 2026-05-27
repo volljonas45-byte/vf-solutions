@@ -6,9 +6,10 @@ interface Props {
   domain: string;
   url: string;
   desc: string;
+  ctaLabel?: string;
 }
 
-export default function PartnerCard({ name, domain, url, desc }: Props) {
+export default function PartnerCard({ name, domain, url, desc, ctaLabel = "Visit website" }: Props) {
   const [logoFailed, setLogoFailed] = useState(false);
 
   return (
@@ -45,7 +46,7 @@ export default function PartnerCard({ name, domain, url, desc }: Props) {
 
       {/* Link indicator */}
       <div className="flex items-center gap-1 text-[11px] text-[#475569] group-hover:text-[#1E6FD9] transition-colors">
-        <span>Zur Website</span>
+        <span>{ctaLabel}</span>
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
           <path d="M2 8L8 2M4.5 2H8v3.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

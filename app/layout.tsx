@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,14 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "vf solutions | CAD · PDM · ERP · Beratung",
-  description: "Über 35 Jahre Erfahrung in CAD/PDM/ERP-Projekten für den Maschinen- und Anlagenbau. 180+ Projekte, 43+ Referenzkunden. 100% anbieterneutral. Volker Freundt, Freiburg.",
-  keywords: ["CAD Beratung", "PDM Einführung", "ERP Integration", "Maschinenbau", "SolidWorks", "SAP PLM", "Freiburg"],
-  openGraph: {
-    title: "vf solutions | CAD/PDM/ERP-Beratung",
-    description: "35+ Jahre Erfahrung · 180+ Projekte · 100% anbieterneutral",
-    type: "website",
-  },
+  title: "vf solutions | CAD & PDM consulting and migration",
+  description:
+    "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 180+ projects, 43+ reference clients. 100% vendor-neutral.",
+  keywords: [
+    "CAD migration",
+    "PDM migration",
+    "CAD/PDM consulting",
+    "mechanical engineering",
+    "SolidWorks",
+    "SAP PLM",
+  ],
 };
 
 export default function RootLayout({
@@ -32,13 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="antialiased min-h-screen flex flex-col">
-        <Navigation />
-        <main className="pt-16 flex-1">
-          {children}
-        </main>
-        <Footer />
-      </body>
+      <body className="antialiased min-h-screen flex flex-col">{children}</body>
     </html>
   );
 }

@@ -1,25 +1,45 @@
-import { CONTACT } from "@/lib/data";
+import { notFound } from "next/navigation";
+import { CONTACT, LOCALES, type Locale } from "@/lib/data";
+import { t } from "@/lib/i18n";
 
-export const metadata = {
-  title: "Kontakt | vf solutions",
-  description: "Nehmen Sie Kontakt mit vf solutions auf. Volker Freundt, Freiburg im Breisgau — direkt erreichbar.",
-};
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
 
-export default function Kontakt() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!LOCALES.includes(locale as Locale)) return {};
+  const tr = t(locale as Locale);
+  return { title: tr.kontakt.title, description: tr.kontakt.description };
+}
+
+export default async function Kontakt({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: rawLocale } = await params;
+  if (!LOCALES.includes(rawLocale as Locale)) notFound();
+  const locale = rawLocale as Locale;
+  const tr = t(locale);
+
   return (
     <>
       {/* HERO */}
       <section className="bg-[#0A1628] py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-xl">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-4 block">Kontakt</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-4 block">
+              {tr.kontakt.eyebrow}
+            </span>
             <h1 className="text-5xl font-black text-white tracking-tight mb-6">
-              Projekt oder Prozessfrage besprechen
+              {tr.kontakt.heroTitle}
             </h1>
-            <p className="text-[#94A3B8] text-lg leading-relaxed">
-              Ein direkter Austausch klärt meist schnell, ob und wie vf solutions
-              ein technisches Vorhaben sinnvoll unterstützen kann.
-            </p>
+            <p className="text-[#94A3B8] text-lg leading-relaxed">{tr.kontakt.heroLead}</p>
           </div>
         </div>
       </section>
@@ -41,7 +61,7 @@ export default function Kontakt() {
                     <p className="text-[#64748B] text-sm">{CONTACT.person}</p>
                     <div className="mt-1 inline-flex items-center gap-1.5 bg-[#ECFDF5] text-[#059669] text-xs font-medium px-2 py-0.5 rounded-full border border-[#A7F3D0]">
                       <span className="w-1.5 h-1.5 bg-[#059669] rounded-full" />
-                      Sofort verfügbar
+                      {tr.kontakt.availability}
                     </div>
                   </div>
                 </div>
@@ -55,7 +75,9 @@ export default function Kontakt() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-xs text-[#94A3B8] uppercase tracking-wide mb-0.5">Adresse</p>
+                      <p className="text-xs text-[#94A3B8] uppercase tracking-wide mb-0.5">
+                        {tr.kontakt.addressLabel}
+                      </p>
                       <p className="text-sm text-[#1A2332]">{CONTACT.address}</p>
                       <p className="text-sm text-[#1A2332]">{CONTACT.city}</p>
                     </div>
@@ -68,9 +90,18 @@ export default function Kontakt() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-xs text-[#94A3B8] uppercase tracking-wide mb-0.5">Telefon</p>
-                      <a href={`tel:${CONTACT.telHref}`} className="text-sm text-[#1E6FD9] hover:underline block">{CONTACT.tel}</a>
-                      <a href={`tel:${CONTACT.mobilHref}`} className="text-sm text-[#1A2332] hover:text-[#1E6FD9] transition-colors">{CONTACT.mobil} (Mobil)</a>
+                      <p className="text-xs text-[#94A3B8] uppercase tracking-wide mb-0.5">
+                        {tr.kontakt.phoneLabel}
+                      </p>
+                      <a href={`tel:${CONTACT.telHref}`} className="text-sm text-[#1E6FD9] hover:underline block">
+                        {CONTACT.tel}
+                      </a>
+                      <a
+                        href={`tel:${CONTACT.mobilHref}`}
+                        className="text-sm text-[#1A2332] hover:text-[#1E6FD9] transition-colors"
+                      >
+                        {CONTACT.mobil} ({tr.kontakt.phoneMobil})
+                      </a>
                     </div>
                   </div>
 
@@ -82,8 +113,12 @@ export default function Kontakt() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-xs text-[#94A3B8] uppercase tracking-wide mb-0.5">E-Mail</p>
-                      <a href={`mailto:${CONTACT.email}`} className="text-sm text-[#1E6FD9] hover:underline">{CONTACT.email}</a>
+                      <p className="text-xs text-[#94A3B8] uppercase tracking-wide mb-0.5">
+                        {tr.kontakt.emailLabel}
+                      </p>
+                      <a href={`mailto:${CONTACT.email}`} className="text-sm text-[#1E6FD9] hover:underline">
+                        {CONTACT.email}
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -93,20 +128,20 @@ export default function Kontakt() {
                     href={`tel:${CONTACT.telHref}`}
                     className="flex-1 text-center bg-[#0A1628] text-white py-2.5 rounded-md text-sm font-semibold hover:bg-[#122040] transition-colors"
                   >
-                    Anrufen
+                    {tr.kontakt.callBtn}
                   </a>
                   <a
                     href={`mailto:${CONTACT.email}`}
                     className="flex-1 text-center border border-[#E2E8F0] text-[#0A1628] py-2.5 rounded-md text-sm font-medium hover:bg-[#F8F9FB] transition-colors"
                   >
-                    E-Mail schreiben
+                    {tr.kontakt.mailBtn}
                   </a>
                 </div>
               </div>
 
               {/* Map link */}
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT.address + ', ' + CONTACT.city)}`}
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT.address + ", " + CONTACT.city)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-white border border-[#E2E8F0] rounded-xl p-4 hover:border-[#1E6FD9]/40 transition-colors group"
@@ -118,7 +153,7 @@ export default function Kontakt() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-[#0A1628]">Route in Google Maps öffnen</p>
+                  <p className="text-sm font-medium text-[#0A1628]">{tr.kontakt.mapsLink}</p>
                   <p className="text-xs text-[#94A3B8]">{CONTACT.address}, {CONTACT.city}</p>
                 </div>
                 <svg className="text-[#94A3B8] group-hover:text-[#1E6FD9] transition-colors" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -129,38 +164,46 @@ export default function Kontakt() {
 
             {/* Kontaktformular */}
             <div className="bg-white border border-[#E2E8F0] rounded-xl p-8">
-              <h2 className="text-xl font-bold text-[#0A1628] mb-2">Nachricht senden</h2>
-              <p className="text-sm text-[#64748B] mb-6">Schildern Sie kurz Ihre Aufgabenstellung — wir melden uns zeitnah.</p>
+              <h2 className="text-xl font-bold text-[#0A1628] mb-2">{tr.kontakt.formTitle}</h2>
+              <p className="text-sm text-[#64748B] mb-6">{tr.kontakt.formLead}</p>
 
               <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">Name *</label>
+                    <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
+                      {tr.kontakt.formName} *
+                    </label>
                     <input
                       type="text"
-                      placeholder="Max Mustermann"
+                      placeholder={locale === "de" ? "Max Mustermann" : "Jane Doe"}
                       className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">Unternehmen</label>
+                    <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
+                      {tr.kontakt.formCompany}
+                    </label>
                     <input
                       type="text"
-                      placeholder="Muster GmbH"
+                      placeholder={locale === "de" ? "Muster GmbH" : "Acme Ltd."}
                       className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">E-Mail *</label>
+                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
+                    {tr.kontakt.formEmail} *
+                  </label>
                   <input
                     type="email"
-                    placeholder="m.mustermann@firma.de"
+                    placeholder={locale === "de" ? "m.mustermann@firma.de" : "j.doe@company.com"}
                     className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">Telefon</label>
+                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
+                    {tr.kontakt.formPhone}
+                  </label>
                   <input
                     type="tel"
                     placeholder="+49 123 456 789"
@@ -168,27 +211,33 @@ export default function Kontakt() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">Ihre Aufgabenstellung *</label>
+                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
+                    {tr.kontakt.formMessage} *
+                  </label>
                   <textarea
                     rows={5}
-                    placeholder="Bitte schildern Sie kurz, womit wir Ihnen helfen können..."
+                    placeholder={tr.kontakt.formPlaceholderMessage}
                     className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors resize-none"
                   />
                 </div>
                 <div className="flex items-start gap-2">
                   <input type="checkbox" id="dsgvo" className="mt-1 accent-[#1E6FD9]" />
                   <label htmlFor="dsgvo" className="text-xs text-[#64748B] leading-relaxed">
-                    Ich habe die <a href="/datenschutz" className="text-[#1E6FD9] hover:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
+                    {tr.kontakt.formPrivacyPre}
+                    <a href={`/${locale}/datenschutz`} className="text-[#1E6FD9] hover:underline">
+                      {tr.kontakt.formPrivacyLink}
+                    </a>
+                    {tr.kontakt.formPrivacyPost}
                   </label>
                 </div>
                 <button
                   type="submit"
                   className="w-full bg-[#0A1628] text-white py-3 rounded-md font-semibold text-sm hover:bg-[#122040] transition-colors"
                 >
-                  Nachricht senden
+                  {tr.kontakt.formSubmit}
                 </button>
                 <p className="text-xs text-[#94A3B8] text-center">
-                  Das Formular ist noch nicht aktiv verbunden. Nutzen Sie bitte direkt{" "}
+                  {tr.kontakt.formHint}{" "}
                   <a href={`mailto:${CONTACT.email}`} className="text-[#1E6FD9] hover:underline">
                     {CONTACT.email}
                   </a>
@@ -201,4 +250,3 @@ export default function Kontakt() {
     </>
   );
 }
-

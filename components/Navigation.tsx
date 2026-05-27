@@ -2,25 +2,47 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { type Locale } from "@/lib/data";
+import { t } from "@/lib/i18n";
 
-const links = [
-  { href: "/", label: "Start" },
-  { href: "/leistungen", label: "Leistungen" },
-  { href: "/projekte", label: "Projekte" },
-  { href: "/kompetenz", label: "Kompetenz" },
-  { href: "/ueber-uns", label: "Über uns" },
-  { href: "/kontakt", label: "Kontakt" },
-];
-
-export default function Navigation() {
+export default function Navigation({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const tr = t(locale);
+
+  const links = [
+    { href: `/${locale}`, label: tr.nav.home, exact: true },
+    { href: `/${locale}/leistungen`, label: tr.nav.leistungen },
+    { href: `/${locale}/projekte`, label: tr.nav.projekte },
+    { href: `/${locale}/kompetenz`, label: tr.nav.kompetenz },
+    { href: `/${locale}/ueber-uns`, label: tr.nav.ueberUns },
+    { href: `/${locale}/kontakt`, label: tr.nav.kontakt },
+  ];
+
+  // Build a path on the other locale that mirrors the current path.
+  const otherLocale: Locale = locale === "de" ? "en" : "de";
+  const switchHref = (() => {
+    if (!pathname) return `/${otherLocale}`;
+    const segments = pathname.split("/").filter(Boolean);
+    // segments[0] is the current locale (or basePath strip already done by Next)
+    if (segments.length === 0) return `/${otherLocale}`;
+    segments[0] = otherLocale;
+    return "/" + segments.join("/");
+  })();
+
+  const isActive = (href: string, exact?: boolean) => {
+    if (exact) return pathname === href;
+    return pathname === href || pathname?.startsWith(href + "/");
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-[#E5E7EB]" style={{backdropFilter: "blur(12px)"}}>
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-white/97 backdrop-blur-md border-b border-[#E5E7EB]"
+      style={{ backdropFilter: "blur(12px)" }}
+    >
       <div className="max-w-7xl mx-auto px-6 h-[82px] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href={`/${locale}`} className="flex items-center">
           <img
             src="/vf-solutions/images/logo-vf.png"
             alt="vf solutions"
@@ -31,7 +53,7 @@ export default function Navigation() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-0.5">
           {links.map((link) => {
-            const active = pathname === link.href;
+            const active = isActive(link.href, link.exact);
             return (
               <Link
                 key={link.href}
@@ -48,26 +70,62 @@ export default function Navigation() {
           })}
         </nav>
 
-        {/* CTA + Mobile toggle */}
+        {/* Language switcher + CTA + Mobile toggle */}
         <div className="flex items-center gap-3">
+          <div className="hidden sm:flex items-center border border-[#E5E7EB] rounded-md overflow-hidden text-xs font-medium">
+            <Link
+              href={pathname?.replace(/^\/(de|en)/, "/de") || "/de"}
+              className={`px-2.5 py-1.5 transition-colors ${
+                locale === "de"
+                  ? "bg-[#0A1628] text-white"
+                  : "text-[#4B5563] hover:bg-[#F8F9FB]"
+              }`}
+              aria-current={locale === "de" ? "true" : undefined}
+            >
+              DE
+            </Link>
+            <Link
+              href={pathname?.replace(/^\/(de|en)/, "/en") || "/en"}
+              className={`px-2.5 py-1.5 transition-colors ${
+                locale === "en"
+                  ? "bg-[#0A1628] text-white"
+                  : "text-[#4B5563] hover:bg-[#F8F9FB]"
+              }`}
+              aria-current={locale === "en" ? "true" : undefined}
+            >
+              EN
+            </Link>
+          </div>
+
           <Link
-            href="/kontakt"
+            href={`/${locale}/kontakt`}
             className="hidden sm:inline-flex items-center bg-[#0A1628] text-white px-4 py-2 text-sm font-medium hover:bg-[#122040] transition-colors"
           >
-            Kontakt aufnehmen
+            {tr.nav.cta}
           </Link>
+
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden p-2 rounded-md text-[#4A5568] hover:bg-[#F8F9FB]"
-            aria-label="Menü"
+            aria-label={tr.nav.menu}
           >
             {open ? (
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <path
+                  d="M4 4l12 12M16 4L4 16"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
             ) : (
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <path
+                  d="M3 5h14M3 10h14M3 15h14"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
             )}
           </button>
@@ -78,7 +136,7 @@ export default function Navigation() {
       {open && (
         <div className="md:hidden bg-white border-t border-[#E2E8F0] px-6 py-4 space-y-1">
           {links.map((link) => {
-            const active = pathname === link.href;
+            const active = isActive(link.href, link.exact);
             return (
               <Link
                 key={link.href}
@@ -94,13 +152,22 @@ export default function Navigation() {
               </Link>
             );
           })}
-          <div className="pt-3 border-t border-[#E2E8F0]">
+          <div className="pt-3 border-t border-[#E2E8F0] flex gap-2">
             <Link
-              href="/kontakt"
+              href={switchHref}
+              onClick={() => setOpen(false)}
+              className="flex-1 text-center border border-[#E5E7EB] text-[#4A5568] px-4 py-2.5 rounded-md text-sm font-medium"
+            >
+              {locale === "de" ? "Switch to English" : "Auf Deutsch umschalten"}
+            </Link>
+          </div>
+          <div className="pt-2">
+            <Link
+              href={`/${locale}/kontakt`}
               onClick={() => setOpen(false)}
               className="block w-full text-center bg-[#0A1628] text-white px-4 py-2.5 rounded-md text-sm font-medium"
             >
-              Kontakt aufnehmen
+              {tr.nav.cta}
             </Link>
           </div>
         </div>
