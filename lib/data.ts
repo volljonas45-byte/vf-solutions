@@ -19,14 +19,14 @@ export const CONTACT = {
 export const STATS: Record<Locale, { value: string; label: string; sub: string }[]> = {
   de: [
     { value: "35+", label: "Jahre Erfahrung", sub: "Aktiv seit 1989" },
-    { value: "180+", label: "Projekte", sub: "Erfolgreich abgeschlossen" },
-    { value: "30+", label: "Systemwechsel", sub: "CAD-Systemmigrationen" },
+    { value: "200+", label: "Projekte", sub: "Erfolgreich abgeschlossen" },
+    { value: "50+", label: "Systemwechsel", sub: "CAD-Systemmigrationen" },
     { value: "44+", label: "Referenzkunden", sub: "Namhafte Unternehmen" },
   ],
   en: [
     { value: "35+", label: "Years of experience", sub: "Active since 1989" },
-    { value: "180+", label: "Projects", sub: "Successfully completed" },
-    { value: "30+", label: "System migrations", sub: "CAD system migrations" },
+    { value: "200+", label: "Projects", sub: "Successfully completed" },
+    { value: "50+", label: "System migrations", sub: "CAD system migrations" },
     { value: "44+", label: "Reference clients", sub: "Renowned companies" },
   ],
 };

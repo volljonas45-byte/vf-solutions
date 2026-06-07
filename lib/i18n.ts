@@ -29,7 +29,7 @@ export const T = {
       ctaContactNow: "Jetzt Kontakt aufnehmen",
       ctaAllRefs: "Alle 43 ansehen",
       ctaViewProjects: "Projekte ansehen",
-      since1989: "Seit 1989 aktiv · 180+ Projekte · 43+ Referenzkunden",
+      since1989: "Seit 1989 aktiv · 200+ Projekte · 43+ Referenzkunden",
       photoFollows: "Foto folgt",
       consultingPhotoAlt: "Berater von vf solutions im Gespräch mit einer Kundin",
       eyebrowConsulting: "Unabhängige technische Beratung · seit 1989",
@@ -50,7 +50,7 @@ export const T = {
     // Home
     home: {
       title: "vf solutions | CAD- und PDM-Beratung & Migration",
-      description: "Über 35 Jahre Erfahrung in CAD- und PDM-Projekten für den Maschinen- und Anlagenbau. Schwerpunkt CAD/PDM-Migration. 180+ Projekte, 43+ Referenzkunden. 100% anbieterneutral.",
+      description: "Über 35 Jahre Erfahrung in CAD- und PDM-Projekten für den Maschinen- und Anlagenbau. Schwerpunkt CAD/PDM-Migration. 200+ Projekte, 43+ Referenzkunden. 100% anbieterneutral.",
       heroHeadlineA: "CAD, PDM und ERP —",
       heroHeadlineB: "aus einer Hand.",
       heroLead:
@@ -147,7 +147,7 @@ export const T = {
       starttermin: "Starttermin",
       starttermin_value: "Kurzfristig nach Vereinbarung",
       ctaTitle: "Systeme kennen ist eine Sache — Projekte umsetzen eine andere.",
-      ctaLead: "180+ abgeschlossene Projekte zeigen, was aus technischem Wissen in der Praxis entsteht.",
+      ctaLead: "200+ abgeschlossene Projekte zeigen, was aus technischem Wissen in der Praxis entsteht.",
     },
 
     // Über uns
@@ -162,7 +162,7 @@ export const T = {
       facts: [
         { label: "Ausbildung", value: "Maschinenbau (FH)" },
         { label: "Erfahrung", value: "35+ Jahre CAD/PDM" },
-        { label: "Projekte", value: "180+ abgeschlossen" },
+        { label: "Projekte", value: "200+ abgeschlossen" },
         { label: "Einsatz", value: "Deutschland / Österreich / Schweiz" },
         { label: "Sprachen", value: "Deutsch, Englisch" },
         { label: "Verfügbarkeit", value: "Kurzfristig nach Vereinbarung" },
@@ -244,7 +244,7 @@ export const T = {
       ctaContactNow: "Get in touch now",
       ctaAllRefs: "View all 43",
       ctaViewProjects: "View projects",
-      since1989: "Active since 1989 · 180+ projects · 43+ reference clients",
+      since1989: "Active since 1989 · 200+ projects · 43+ reference clients",
       photoFollows: "Photo to follow",
       consultingPhotoAlt: "vf solutions advisor in conversation with a client",
       eyebrowConsulting: "Independent technical consulting · since 1989",
@@ -263,7 +263,7 @@ export const T = {
 
     home: {
       title: "vf solutions | CAD & PDM consulting and migration",
-      description: "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 180+ projects, 43+ reference clients. 100% vendor-neutral.",
+      description: "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 200+ projects, 43+ reference clients. 100% vendor-neutral.",
       heroHeadlineA: "CAD, PDM and ERP —",
       heroHeadlineB: "from a single source.",
       heroLead:
@@ -357,7 +357,7 @@ export const T = {
       starttermin: "Start date",
       starttermin_value: "On short notice by arrangement",
       ctaTitle: "Knowing systems is one thing — delivering projects is another.",
-      ctaLead: "180+ completed projects show what technical knowledge can produce in practice.",
+      ctaLead: "200+ completed projects show what technical knowledge can produce in practice.",
     },
 
     ueberUns: {
@@ -371,7 +371,7 @@ export const T = {
       facts: [
         { label: "Education", value: "Mechanical Engineering (FH)" },
         { label: "Experience", value: "35+ years CAD/PDM" },
-        { label: "Projects", value: "180+ completed" },
+        { label: "Projects", value: "200+ completed" },
         { label: "Engagement", value: "Germany / Austria / Switzerland" },
         { label: "Languages", value: "German, English" },
         { label: "Availability", value: "On short notice by arrangement" },

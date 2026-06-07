@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "vf solutions | CAD & PDM consulting and migration",
   description:
-    "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 180+ projects, 43+ reference clients. 100% vendor-neutral.",
+    "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 200+ projects, 43+ reference clients. 100% vendor-neutral.",
   keywords: [
     "CAD migration",
     "PDM migration",
