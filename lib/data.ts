@@ -392,6 +392,19 @@ export const REFERENZKUNDEN_DOMAINS: Record<string, string> = {
   "KH TEC GmbH": "kh-tec.com",
 };
 
+// Explicit logo overrides (real brand logos) — take precedence over the favicon
+// fallback in LogoCell. `bg` sets the tile colour (default white); use a coloured
+// tile for white/transparent logos so they stay visible.
+export const REFERENZKUNDEN_LOGOS: Record<string, { src: string; bg?: string }> = {
+  "TII Scheuerle Fahrzeugfabrik GmbH": { src: "/vf-solutions/images/logos/scheuerle.png" },
+  "Bickel Blechtechnik GmbH": { src: "/vf-solutions/images/logos/bickel.svg" },
+  "ILLIG packaging solutions GmbH": { src: "/vf-solutions/images/logos/illig.png", bg: "#2b5797" },
+  "GEWEFA Josef C.Pfister GmbH & Co.KG": { src: "/vf-solutions/images/logos/gewefa.jpg" },
+  "DATRON AG": { src: "/vf-solutions/images/logos/datron.png" },
+  "Novotechnik Messwertaufnehmer OHG": { src: "/vf-solutions/images/logos/novotechnik.png" },
+  "PIA Automation Holding GmbH": { src: "/vf-solutions/images/logos/pia.png" },
+};
+
 export const REFERENZKUNDEN = [
   "PIA Automation Holding GmbH",
   "Benninger AG",

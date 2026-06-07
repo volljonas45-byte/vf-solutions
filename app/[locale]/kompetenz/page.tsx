@@ -102,12 +102,18 @@ export default async function Kompetenz({
             <p className="text-[#94A3B8] text-lg leading-relaxed">{tr.kompetenz.heroLead}</p>
           </div>
           <div className="flex flex-wrap gap-3 mt-10">
-            {["SolidWorks", "SAP PLM", "CATIA V5", "SolidEdge", "Inventor", "Creo Parametric"].map((s) => (
+            {[
+              { label: "SolidWorks", color: "bg-[#1E6FD9]/15 text-[#93C5FD] border-[#1E6FD9]/40" },
+              { label: "SAP PLM", color: "bg-[#7C3AED]/15 text-[#C4B5FD] border-[#7C3AED]/40" },
+              { label: "SQL", color: "bg-[#D97706]/15 text-[#FCD34D] border-[#D97706]/40" },
+              { label: "SolidEdge", color: "bg-[#059669]/15 text-[#6EE7B7] border-[#059669]/40" },
+              { label: "Oracle", color: "bg-[#DC2626]/15 text-[#FCA5A5] border-[#DC2626]/40" },
+            ].map((s) => (
               <span
-                key={s}
-                className="font-mono text-sm bg-[#1E6FD9]/10 text-[#93C5FD] border border-[#1E6FD9]/20 px-3 py-1.5 rounded-md"
+                key={s.label}
+                className={`font-mono text-sm border px-3 py-1.5 rounded-md ${s.color}`}
               >
-                {s}
+                {s.label}
               </span>
             ))}
             <span className="font-mono text-sm bg-white/5 text-[#475569] border border-white/10 px-3 py-1.5 rounded-md">

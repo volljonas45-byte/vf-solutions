@@ -4,6 +4,7 @@ import {
   PROJEKT_FEATURES,
   REFERENZKUNDEN,
   REFERENZKUNDEN_DOMAINS,
+  REFERENZKUNDEN_LOGOS,
   LOCALES,
   type Locale,
 } from "@/lib/data";
@@ -179,7 +180,12 @@ export default async function Projekte({
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-white/5 border border-white/8 overflow-hidden">
             {REFERENZKUNDEN.map((name) => (
-              <LogoCell key={name} name={name} domain={REFERENZKUNDEN_DOMAINS[name]} />
+              <LogoCell
+                key={name}
+                name={name}
+                domain={REFERENZKUNDEN_DOMAINS[name]}
+                logo={REFERENZKUNDEN_LOGOS[name]}
+              />
             ))}
           </div>
         </div>

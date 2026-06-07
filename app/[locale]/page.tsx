@@ -6,6 +6,7 @@ import {
   USPS,
   REFERENZKUNDEN,
   REFERENZKUNDEN_DOMAINS,
+  REFERENZKUNDEN_LOGOS,
   CONTACT,
   LOCALES,
   type Locale,
@@ -125,7 +126,7 @@ export default async function Home({
               <img
                 src="/vf-solutions/images/beratung-consulting.jpg"
                 alt={tr.common.consultingPhotoAlt}
-                className="absolute inset-0 w-full h-full object-cover object-[center_25%]"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
             </div>
           </div>
@@ -234,7 +235,12 @@ export default async function Home({
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px bg-white/5 border border-white/8 overflow-hidden">
             {featuredRefs.map((name) => (
-              <LogoCell key={name} name={name} domain={REFERENZKUNDEN_DOMAINS[name]} />
+              <LogoCell
+                key={name}
+                name={name}
+                domain={REFERENZKUNDEN_DOMAINS[name]}
+                logo={REFERENZKUNDEN_LOGOS[name]}
+              />
             ))}
           </div>
         </div>
