@@ -382,7 +382,7 @@ export const REFERENZKUNDEN_DOMAINS: Record<string, string> = {
   "Bickel Blechtechnik GmbH": "bickel-blechtechnik.de",
   "RENA Technologies GmbH": "rena.com",
   "ILLIG packaging solutions GmbH": "illig.com",
-  "Linnemann GmbH": "linnemann.de",
+  "Linnemann GmbH": "linnemann-online.com",
   "INTRAVIS GmbH": "intravis.de",
   "SEW-EURODRIVE GmbH & Co. KG": "sew-eurodrive.com",
   "NEOPERL GmbH": "neoperl.com",
@@ -403,6 +403,8 @@ export const REFERENZKUNDEN_LOGOS: Record<string, { src: string; bg?: string }> 
   "DATRON AG": { src: "/vf-solutions/images/logos/datron.png" },
   "Novotechnik Messwertaufnehmer OHG": { src: "/vf-solutions/images/logos/novotechnik.png" },
   "PIA Automation Holding GmbH": { src: "/vf-solutions/images/logos/pia.png" },
+  "SEW-EURODRIVE GmbH & Co. KG": { src: "/vf-solutions/images/logos/sew.svg" },
+  "Linnemann GmbH": { src: "/vf-solutions/images/logos/linnemann.svg" },
 };
 
 export const REFERENZKUNDEN = [
