@@ -31,6 +31,7 @@ export const T = {
       ctaViewProjects: "Projekte ansehen",
       since1989: "Seit 1989 aktiv · 180+ Projekte · 43+ Referenzkunden",
       photoFollows: "Foto folgt",
+      consultingPhotoAlt: "Berater von vf solutions im Gespräch mit einer Kundin",
       eyebrowConsulting: "Unabhängige technische Beratung · seit 1989",
     },
 
@@ -50,17 +51,19 @@ export const T = {
     home: {
       title: "vf solutions | CAD- und PDM-Beratung & Migration",
       description: "Über 35 Jahre Erfahrung in CAD- und PDM-Projekten für den Maschinen- und Anlagenbau. Schwerpunkt CAD/PDM-Migration. 180+ Projekte, 43+ Referenzkunden. 100% anbieterneutral.",
-      heroHeadlineA: "CAD und PDM —",
-      heroHeadlineB: "Migration aus einer Hand.",
+      heroHeadlineA: "CAD, PDM und ERP —",
+      heroHeadlineB: "aus einer Hand.",
       heroLead:
-        "Seit 1989 begleitet vf solutions Unternehmen im Maschinen- und Anlagenbau bei Analyse, Konzeption und nachhaltiger Migration von CAD- und PDM-Daten — zu 100 % anbieterneutral.",
-      philoTitleA: "Anwalt der Interessen",
-      philoTitleB: "seiner Kunden.",
+        "Seit 1989 begleitet vf solutions Unternehmen im Maschinen- und Anlagenbau bei Analyse, Konzeption, Entwicklung und controllingfester Umsetzung im CAD-, PDM- und ERP-Umfeld — zu 100 % anbieterneutral.",
+      philoTitleA: "100 % unabhängig.",
+      philoTitleB: "100 % kundenorientiert.",
       philoP1:
-        "vf solutions versteht sich als unabhängiger Berater — ohne Bindung an Softwarehersteller, Vertriebsprogramme oder Provisionen. Systemauswahl nach den tatsächlichen Anforderungen des Kunden, nicht nach Marktanteilen.",
-      philoP2Pre: "Projekte laufen ohne signifikante Störung des Tagesbetriebs. Die Ergebnisse sind ",
-      philoP2Strong: "„controlling-fest“",
-      philoP2Post: " — messbar, nachweisbar, praxistauglich.",
+        "vf solutions steht seit über 20 Jahren für erfolgreiche Projekte im CAD/PDM/ERP-Umfeld von Konstruktion, Entwicklung und Organisation in Unternehmen des Maschinen- und Anlagenbaus.",
+      philoP2:
+        "vf solutions ist zu 100 % system- und anbieterneutral aufgestellt und somit unabhängig von Herstellern und deren Produkten. vf solutions versteht sich allein als Anwalt der Interessen der Kunden und steht diesen mit Beratung, Entwicklung und controllingfester Realisierung zur Seite.",
+      philoP3Pre: "Sämtliche Projekte laufen ohne signifikante Störung des Tagesbetriebs. Die Ergebnisse sind ",
+      philoP3Strong: "controlling-fest",
+      philoP3Post: " — messbar, nachweisbar und praxistauglich.",
       servicesTitleA: "Beratung, Umsetzung",
       servicesTitleB: "und Stabilisierung",
       servicesLead:
@@ -78,7 +81,7 @@ export const T = {
       eyebrow: "Leistungen",
       heroTitle: "Beratung, Umsetzung und Stabilisierung aus einer Hand",
       heroLead:
-        "Der Schwerpunkt liegt auf CAD/PDM-Migration — ergänzt um tragfähige Prozesse, klare Systemlogik und realistische Umsetzung im laufenden technischen Betrieb, ohne signifikante Störung des Tagesgeschäfts.",
+        "Der Schwerpunkt liegt auf CAD/PDM-Migration — ergänzt um tragfähige Prozesse und klare Systemlogik. Konzipiert und umgesetzt mitten im laufenden Betrieb, sodass das Tagesgeschäft ungestört weiterläuft.",
       focusBadge: "Schwerpunkt",
       uspEyebrow: "Kommerzielle Aspekte",
       uspTitle: "Faire, transparente Konditionen",
@@ -94,22 +97,22 @@ export const T = {
     // Projekte
     projekte: {
       title: "Projekte & Referenzkunden | vf solutions",
-      description: "180+ erfolgreich realisierte Projekte. Schwerpunkt CAD/PDM-Migration. 43+ Referenzkunden aus dem deutschen Maschinenbau.",
+      description: "200+ erfolgreich realisierte Projekte. Schwerpunkt CAD/PDM-Migration. 43+ Referenzkunden aus dem deutschen Maschinenbau.",
       eyebrow: "Projekte & Referenzen",
-      heroTitleA: "180+ Projekte.",
+      heroTitleA: "200+ Projekte.",
       heroTitleB: "Seit 1989.",
       heroLead:
-        "vf solutions hat seit 1989 weit über 180 Projekte erfolgreich realisiert — mit klarem Schwerpunkt auf CAD/PDM-Migration sowie ergänzend Anwendungsentwicklung, Sachnummerung und CAD/PDM-Einführungen.",
+        "vf solutions hat seit 1989 weit über 200 Projekte erfolgreich realisiert — mit klarem Schwerpunkt auf CAD/PDM-Migration sowie ergänzend Anwendungsentwicklung, Sachnummerung und CAD/PDM-Einführungen.",
       stats: [
-        { value: "180+", label: "Projekte gesamt" },
-        { value: "30+", label: "CAD-Systemwechsel" },
+        { value: "200+", label: "Projekte gesamt" },
+        { value: "50+", label: "CAD-Systemwechsel" },
         { value: "1989", label: "Erstes Projekt" },
         { value: "43+", label: "Referenzkunden" },
       ],
       areasEyebrow: "Projektschwerpunkte",
-      areasTitle: "PDM-Systemwechsel & Anwendungsentwicklung",
+      areasTitle: "Systemwechsel, Entwicklung & Klassifizierung",
       areasLead:
-        "Zwei tragende Säulen der Arbeit von vf solutions — die Migration von CAD- und PDM-Datenbeständen sowie die kundenspezifische Anwendungsentwicklung im CAx-Umfeld.",
+        "Die Schwerpunkte der Arbeit von vf solutions — von der Migration gewachsener CAD- und PDM-Datenbestände über kundenspezifische Anwendungsentwicklung bis zu klassifizierungsbasierenden Sachnummernsystemen.",
       vorgehen: "Vorgehen",
       nutzen: "Nutzen",
       focusBadge: "Schwerpunkt",
@@ -135,6 +138,8 @@ export const T = {
       progTitle: "Programmiersprachen",
       apiTitle: "API-Programmierung",
       dbTitle: "Datenbanken",
+      overviewEyebrow: "Auf einen Blick",
+      overviewTitle: "Technologien nach Kategorie",
       einsatzgebiet: "Einsatzgebiet",
       einsatzgebietValue: "Deutschland / Österreich / Schweiz",
       verfuegbarkeit: "Verfügbarkeit",
@@ -241,6 +246,7 @@ export const T = {
       ctaViewProjects: "View projects",
       since1989: "Active since 1989 · 180+ projects · 43+ reference clients",
       photoFollows: "Photo to follow",
+      consultingPhotoAlt: "vf solutions advisor in conversation with a client",
       eyebrowConsulting: "Independent technical consulting · since 1989",
     },
 
@@ -258,17 +264,19 @@ export const T = {
     home: {
       title: "vf solutions | CAD & PDM consulting and migration",
       description: "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 180+ projects, 43+ reference clients. 100% vendor-neutral.",
-      heroHeadlineA: "CAD and PDM —",
-      heroHeadlineB: "migration from a single source.",
+      heroHeadlineA: "CAD, PDM and ERP —",
+      heroHeadlineB: "from a single source.",
       heroLead:
-        "Since 1989, vf solutions has supported companies in mechanical and plant engineering with analysis, concept design and sustainable migration of CAD and PDM data — 100% vendor-neutral.",
-      philoTitleA: "Acting for the client's",
-      philoTitleB: "interests alone.",
+        "Since 1989, vf solutions has supported companies in mechanical and plant engineering with analysis, concept design, development and controllable delivery across CAD, PDM and ERP — 100% vendor-neutral.",
+      philoTitleA: "100% independent.",
+      philoTitleB: "100% client-focused.",
       philoP1:
-        "vf solutions works as an independent advisor — no ties to software vendors, no sales programmes, no commissions. System selection follows real requirements, not market share.",
-      philoP2Pre: "Projects run without disrupting daily operations. The outcomes are ",
-      philoP2Strong: "\"controllable\"",
-      philoP2Post: " — measurable, demonstrable and fit for practice.",
+        "For over 20 years, vf solutions has stood for successful projects across the CAD/PDM/ERP environment — in design, development and organization at mechanical and plant engineering companies.",
+      philoP2:
+        "vf solutions is positioned 100% system- and vendor-neutral, and therefore independent of manufacturers and their products. vf solutions acts solely as the advocate of its clients' interests, supporting them with consulting, development and controllable delivery.",
+      philoP3Pre: "Every project runs without disrupting daily operations. The outcomes are ",
+      philoP3Strong: "controllable",
+      philoP3Post: " — measurable, demonstrable and fit for practice.",
       servicesTitleA: "Consulting, delivery",
       servicesTitleB: "and stabilization",
       servicesLead:
@@ -285,7 +293,7 @@ export const T = {
       eyebrow: "Services",
       heroTitle: "Consulting, delivery and stabilization from a single source",
       heroLead:
-        "The core focus is CAD/PDM migration — complemented by viable processes, clear system logic and realistic delivery during ongoing technical operations, without disrupting day-to-day business.",
+        "The core focus is CAD/PDM migration — complemented by viable processes and clear system logic. Designed and delivered right in the middle of ongoing operations, so day-to-day business keeps running undisturbed.",
       focusBadge: "Core focus",
       uspEyebrow: "Commercial principles",
       uspTitle: "Fair, transparent terms",
@@ -300,22 +308,22 @@ export const T = {
 
     projekte: {
       title: "Projects & reference clients | vf solutions",
-      description: "180+ successfully delivered projects. Core focus: CAD/PDM migration. 43+ reference clients from German mechanical engineering.",
+      description: "200+ successfully delivered projects. Core focus: CAD/PDM migration. 43+ reference clients from German mechanical engineering.",
       eyebrow: "Projects & references",
-      heroTitleA: "180+ projects.",
+      heroTitleA: "200+ projects.",
       heroTitleB: "Since 1989.",
       heroLead:
-        "Since 1989, vf solutions has successfully delivered well over 180 projects — with a clear focus on CAD/PDM migration, complemented by custom development, classification and CAD/PDM rollouts.",
+        "Since 1989, vf solutions has successfully delivered well over 200 projects — with a clear focus on CAD/PDM migration, complemented by custom development, classification and CAD/PDM rollouts.",
       stats: [
-        { value: "180+", label: "Projects in total" },
-        { value: "30+", label: "CAD system changes" },
+        { value: "200+", label: "Projects in total" },
+        { value: "50+", label: "CAD system changes" },
         { value: "1989", label: "First project" },
         { value: "43+", label: "Reference clients" },
       ],
       areasEyebrow: "Project focus",
-      areasTitle: "PDM system migration & custom development",
+      areasTitle: "System migration, development & classification",
       areasLead:
-        "The two main pillars of vf solutions' work — migrating CAD and PDM data, and developing customer-specific applications in the CAx environment.",
+        "The focus areas of vf solutions' work — from migrating grown CAD and PDM data and customer-specific application development to classification-based part numbering systems.",
       vorgehen: "Approach",
       nutzen: "Benefit",
       focusBadge: "Core focus",
@@ -340,6 +348,8 @@ export const T = {
       progTitle: "Programming languages",
       apiTitle: "API programming",
       dbTitle: "Databases",
+      overviewEyebrow: "At a glance",
+      overviewTitle: "Technologies by category",
       einsatzgebiet: "Engagement area",
       einsatzgebietValue: "Germany / Austria / Switzerland",
       verfuegbarkeit: "Availability",

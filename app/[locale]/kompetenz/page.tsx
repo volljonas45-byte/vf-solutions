@@ -43,6 +43,7 @@ export default async function Kompetenz({
       count: CAD_SYSTEME.length,
       items: CAD_SYSTEME,
       color: "text-[#1E6FD9] bg-[#EEF4FF] border-[#BFDBFE]",
+      solid: "#1E6FD9",
     },
     {
       title: tr.kompetenz.pdmTitle,
@@ -50,6 +51,7 @@ export default async function Kompetenz({
       count: PDM_SYSTEME.length,
       items: PDM_SYSTEME,
       color: "text-[#7C3AED] bg-[#F5F3FF] border-[#DDD6FE]",
+      solid: "#7C3AED",
     },
     {
       title: tr.kompetenz.progTitle,
@@ -57,6 +59,7 @@ export default async function Kompetenz({
       count: PROGRAMMIERUNG.length,
       items: PROGRAMMIERUNG,
       color: "text-[#D97706] bg-[#FFFBEB] border-[#FDE68A]",
+      solid: "#D97706",
     },
     {
       title: tr.kompetenz.apiTitle,
@@ -64,6 +67,7 @@ export default async function Kompetenz({
       count: API_SYSTEME.length,
       items: API_SYSTEME,
       color: "text-[#059669] bg-[#ECFDF5] border-[#A7F3D0]",
+      solid: "#059669",
     },
     {
       title: tr.kompetenz.dbTitle,
@@ -71,14 +75,23 @@ export default async function Kompetenz({
       count: DATENBANKEN.length,
       items: DATENBANKEN,
       color: "text-[#DC2626] bg-[#FEF2F2] border-[#FECACA]",
+      solid: "#DC2626",
     },
   ];
 
   return (
     <>
       {/* HERO */}
-      <section className="bg-[#0A1628] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative bg-[#0A1628] py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/vf-solutions/images/kompetenz-hero.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center opacity-25"
+          />
+          <div className="absolute inset-0 photo-overlay-dark" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-4 block">
               {tr.kompetenz.eyebrow}
@@ -89,7 +102,7 @@ export default async function Kompetenz({
             <p className="text-[#94A3B8] text-lg leading-relaxed">{tr.kompetenz.heroLead}</p>
           </div>
           <div className="flex flex-wrap gap-3 mt-10">
-            {["SolidWorks", "SAP PLM", "CATIA V5", "MaxxDB", "SolidEdge", "Inventor"].map((s) => (
+            {["SolidWorks", "SAP PLM", "CATIA V5", "SolidEdge", "Inventor", "Creo Parametric"].map((s) => (
               <span
                 key={s}
                 className="font-mono text-sm bg-[#1E6FD9]/10 text-[#93C5FD] border border-[#1E6FD9]/20 px-3 py-1.5 rounded-md"
@@ -145,6 +158,37 @@ export default async function Kompetenz({
                 <div className="text-3xl text-[#1E6FD9] mb-3">→</div>
                 <div className="text-xs text-[#94A3B8] uppercase tracking-widest mb-1.5">{item.label}</div>
                 <div className="text-base font-bold text-[#0A1628]">{item.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TECHNOLOGIEN NACH KATEGORIE — farbcodierte Boxen */}
+      <section className="section bg-white border-t border-[#E2E8F0]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-3 block">
+              {tr.kompetenz.overviewEyebrow}
+            </span>
+            <h2 className="text-3xl font-black text-[#0A1628] tracking-tight">
+              {tr.kompetenz.overviewTitle}
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {GRUPPEN.map((g) => (
+              <div
+                key={g.title}
+                className="rounded-xl p-6 text-white flex flex-col justify-between min-h-[150px] shadow-sm"
+                style={{ backgroundColor: g.solid }}
+              >
+                <span className="inline-flex items-center self-start text-[11px] font-mono font-bold bg-white/20 px-2 py-0.5 rounded">
+                  {g.tag}
+                </span>
+                <div>
+                  <div className="text-3xl font-black leading-none">{g.count}</div>
+                  <div className="text-sm font-semibold mt-2 leading-snug">{g.title}</div>
+                </div>
               </div>
             ))}
           </div>

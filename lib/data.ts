@@ -44,13 +44,13 @@ export const LEISTUNGEN: Record<Locale, {
     {
       number: "01",
       tag: "MIG",
-      title: "CAD/PDM-Migration & Archivierung",
-      desc: "Schwerpunkt der Arbeit von vf solutions: Planung und Begleitung von CAD- und PDM-Migrationen mit Blick auf Struktur, Datenqualität, Nachvollziehbarkeit und einen sicheren Betrieb der Altdaten in der Koexistenzphase.",
+      title: "CAD/PDM-Migration",
+      desc: "Schwerpunkt der Arbeit von vf solutions: Planung und Begleitung von CAD- und PDM-Migrationen mit Blick auf Struktur, Datenqualität und Nachvollziehbarkeit — für eine verlässliche Koexistenz von Alt- und Neudaten während der Übergangsphase.",
       bullets: [
         "CAD-Datenbestand-Migration (versionssicher, redundanzfrei)",
         "PDM-Metadaten-Transfer & Workflow-Mapping",
-        "Archiv-Integration (EASY, CADIM und weitere)",
-        "Konvertierung, Konsistenzprüfung & Schnittstellenprogrammierung",
+        "Strukturbereinigung, Dubletten- & Konsistenzprüfung",
+        "Konvertierung & Schnittstellenprogrammierung",
       ],
       highlight: true,
     },
@@ -80,12 +80,12 @@ export const LEISTUNGEN: Record<Locale, {
     },
     {
       number: "04",
-      tag: "PL",
-      title: "Projektleitung & Realisierung",
-      desc: "Koordination von Fachbereichen, IT und Systempartnern mit klaren Meilensteinen, sauberer Dokumentation und pragmatischer Steuerung.",
+      tag: "REA",
+      title: "Realisierung",
+      desc: "Strukturierte Umsetzung im laufenden Betrieb — mit klaren Meilensteinen, sauberer Dokumentation und pragmatischer Steuerung, ohne signifikante Störung des Tagesbetriebs.",
       bullets: [
-        "Teilprojekt- und Gesamtprojektleitung",
-        "Key-User-Konzept & Koordination",
+        "Umsetzung & Einführung im laufenden Betrieb",
+        "Key-User-Einbindung & Abstimmung",
         "Meilensteinplanung & Controlling",
         "Systempartner-Integration",
       ],
@@ -105,8 +105,8 @@ export const LEISTUNGEN: Record<Locale, {
     {
       number: "06",
       tag: "KLS",
-      title: "Sachnummernsysteme & Klassifizierung",
-      desc: "Entwicklung und Implementierung klassifizierungsbasierender Sachnummernsysteme — für bessere Teilewiederverwendung und strukturiertes Änderungsmanagement.",
+      title: "Sachnummernsysteme",
+      desc: "In vielen Konstruktions- und Entwicklungsabteilungen werden häufig unnötig viele Neuteile eingeführt, obwohl meist der Verdacht auf Existenz identischer oder zumindest ähnlicher Teile besteht. Diese Wiederhol- oder Ähnlichteile lassen sich methodisch sauber nur über eine unternehmensweit gültige Klassifizierung auffinden — Sachmerkmale unterstützen im Bedarfsfall die Feinauswahl. vf solutions entwickelt, implementiert und stabilisiert klassifizierungsbasierende Sachnummernsysteme — auch in Ihrem Unternehmen?",
       bullets: [
         "Iststandsanalyse & Klassifizierungskonzept",
         "Sachmerkmalsleisten",
@@ -119,13 +119,13 @@ export const LEISTUNGEN: Record<Locale, {
     {
       number: "01",
       tag: "MIG",
-      title: "CAD/PDM migration & archiving",
-      desc: "The core focus of vf solutions: planning and executing CAD and PDM migrations with strict attention to structure, data quality, traceability and safe operation of legacy data during the coexistence phase.",
+      title: "CAD/PDM migration",
+      desc: "The core focus of vf solutions: planning and executing CAD and PDM migrations with strict attention to structure, data quality and traceability — for a reliable coexistence of legacy and new data throughout the transition phase.",
       bullets: [
         "CAD data migration (version-safe, redundancy-free)",
         "PDM metadata transfer & workflow mapping",
-        "Archive integration (EASY, CADIM and others)",
-        "Conversion, consistency checks & interface programming",
+        "Structure clean-up, duplicate & consistency checks",
+        "Conversion & interface programming",
       ],
       highlight: true,
     },
@@ -155,12 +155,12 @@ export const LEISTUNGEN: Record<Locale, {
     },
     {
       number: "04",
-      tag: "PM",
-      title: "Project management & delivery",
-      desc: "Coordination of departments, IT and system partners with clear milestones, clean documentation and pragmatic steering.",
+      tag: "REA",
+      title: "Delivery",
+      desc: "Structured delivery during ongoing operations — with clear milestones, clean documentation and pragmatic steering, without disrupting day-to-day business.",
       bullets: [
-        "Sub-project and overall project leadership",
-        "Key-user concept & coordination",
+        "Rollout & delivery during ongoing operations",
+        "Key-user involvement & coordination",
         "Milestone planning & controlling",
         "System partner integration",
       ],
@@ -180,8 +180,8 @@ export const LEISTUNGEN: Record<Locale, {
     {
       number: "06",
       tag: "CLS",
-      title: "Part numbering & classification",
-      desc: "Development and implementation of classification-based part numbering systems — enabling better part reuse and structured change management.",
+      title: "Part numbering systems",
+      desc: "In many design and engineering departments, far too many new parts are created — even though identical or at least similar parts very likely already exist. These repeat or similar parts can only be found methodically through a company-wide classification — part characteristics support the fine selection where needed. vf solutions develops, implements and stabilizes classification-based part numbering systems — in your company too?",
       bullets: [
         "Current-state analysis & classification concept",
         "Part characteristic structures",
@@ -251,6 +251,17 @@ export type ProjektFeature = {
 export const PROJEKT_FEATURES: Record<Locale, ProjektFeature[]> = {
   de: [
     {
+      tag: "CAD",
+      title: "CAD-Systemwechsel",
+      count: "50+ Systemwechsel",
+      paragraphs: [
+        "Ein Wechsel des führenden CAD-Systems ist eine strategische Entscheidung — getrieben durch Konsolidierung, neue Konstruktionsmethodik, Kompatibilitätsanforderungen oder das Auslaufen bestehender Systeme.",
+        "Die eigentliche Herausforderung liegt selten in der Software selbst, sondern in der verlässlichen Überführung gewachsener Datenbestände, Methoden und Konstruktionsprozesse in die neue Umgebung — ohne Stillstand in der Konstruktion.",
+        "vf solutions begleitet CAD-Systemwechsel von der Systemauswahl über die Migrationsplanung bis zur stabilen Produktivsetzung — mit über 50 erfolgreich umgesetzten Systemwechseln als Fundament.",
+      ],
+      ctaQuestion: "Steht bei Ihnen ein CAD-Systemwechsel an?",
+    },
+    {
       tag: "MIGRATION",
       title: "PDM-Systemwechsel",
       count: "Schwerpunkt · Löwenanteil",
@@ -273,8 +284,30 @@ export const PROJEKT_FEATURES: Record<Locale, ProjektFeature[]> = {
       ],
       ctaQuestion: "Wie sieht Ihre konkrete Aufgabenstellung aus?",
     },
+    {
+      tag: "KLS",
+      title: "Sachnummerung & Klassifizierung",
+      count: "Klassifizierung · Wiederverwendung",
+      paragraphs: [
+        "In vielen Konstruktions- und Entwicklungsabteilungen werden unnötig viele Neuteile eingeführt, obwohl identische oder zumindest ähnliche Teile meist bereits existieren.",
+        "Diese Wiederhol- oder Ähnlichteile lassen sich methodisch sauber nur über eine unternehmensweit gültige Klassifizierung auffinden — Sachmerkmale unterstützen im Bedarfsfall die Feinauswahl.",
+        "vf solutions entwickelt, implementiert und stabilisiert klassifizierungsbasierende Sachnummernsysteme — auch in Ihrem Unternehmen?",
+      ],
+      ctaQuestion: "Wie ist Ihre Teilevielfalt organisiert?",
+    },
   ],
   en: [
+    {
+      tag: "CAD",
+      title: "CAD system migration",
+      count: "50+ system changes",
+      paragraphs: [
+        "Switching the leading CAD system is a strategic decision — driven by consolidation, new design methodology, compatibility requirements or the end of life of existing systems.",
+        "The real challenge rarely lies in the software itself, but in reliably transferring grown data, methods and design processes into the new environment — without bringing engineering to a standstill.",
+        "vf solutions guides CAD system migrations from system selection through migration planning to stable go-live — built on more than 50 successfully delivered system changes.",
+      ],
+      ctaQuestion: "Are you facing a CAD system migration?",
+    },
     {
       tag: "MIGRATION",
       title: "PDM system migration",
@@ -297,6 +330,17 @@ export const PROJEKT_FEATURES: Record<Locale, ProjektFeature[]> = {
         "Further focus areas include the conception, development and rollout of databases as well as the delivery of complex integrated applications — do you see starting points in your organization?",
       ],
       ctaQuestion: "What does your specific challenge look like?",
+    },
+    {
+      tag: "CLS",
+      title: "Part numbering & classification",
+      count: "Classification · part reuse",
+      paragraphs: [
+        "In many design and engineering departments, far too many new parts are created — even though identical or at least similar parts usually already exist.",
+        "These repeat or similar parts can only be found methodically through a company-wide classification — part characteristics support the fine selection where needed.",
+        "vf solutions develops, implements and stabilizes classification-based part numbering systems — in your company too?",
+      ],
+      ctaQuestion: "How is your part variety organized?",
     },
   ],
 };
@@ -343,6 +387,9 @@ export const REFERENZKUNDEN_DOMAINS: Record<string, string> = {
   "SEW-EURODRIVE GmbH & Co. KG": "sew-eurodrive.com",
   "NEOPERL GmbH": "neoperl.com",
   "TII Scheuerle Fahrzeugfabrik GmbH": "scheuerle.com",
+  "Toyota Automated Logistics Systems GmbH": "toyota-automated-logistics.com",
+  "Jecture GmbH": "jecture.com",
+  "KH TEC GmbH": "kh-tec.com",
 };
 
 export const REFERENZKUNDEN = [

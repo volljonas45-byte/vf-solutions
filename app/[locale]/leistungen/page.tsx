@@ -32,8 +32,16 @@ export default async function Leistungen({
   return (
     <>
       {/* HERO */}
-      <section className="bg-[#0A1628] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative bg-[#0A1628] py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/vf-solutions/images/leistungen-hero.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          <div className="absolute inset-0 photo-overlay-dark" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#1E6FD9] mb-4 block">
               {tr.leistungen.eyebrow}

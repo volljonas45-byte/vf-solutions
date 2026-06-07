@@ -104,8 +104,11 @@ export default async function Home({
               <p className="text-[#374151] leading-relaxed mb-5">
                 {tr.home.philoP1}
               </p>
+              <p className="text-[#374151] leading-relaxed mb-5">
+                {tr.home.philoP2}
+              </p>
               <p className="text-[#374151] leading-relaxed mb-8">
-                {tr.home.philoP2Pre}<strong className="text-[#0A1628]">{tr.home.philoP2Strong}</strong>{tr.home.philoP2Post}
+                {tr.home.philoP3Pre}<strong className="text-[#0A1628]">{tr.home.philoP3Strong}</strong>{tr.home.philoP3Post}
               </p>
               <Link
                 href={`/${locale}/ueber-uns`}
@@ -118,17 +121,12 @@ export default async function Home({
               </Link>
             </div>
 
-            <div className="hidden lg:flex relative min-h-[360px] items-center justify-center bg-[#F7F8FA]">
-              <div className="text-center select-none">
-                <div className="w-14 h-14 border-2 border-dashed border-[#D1D5DB] rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" strokeWidth="1.5" strokeLinecap="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <path d="M21 15l-5-5L5 21"/>
-                  </svg>
-                </div>
-                <p className="text-[#C4C9D4] text-xs tracking-wide">{tr.common.photoFollows}</p>
-              </div>
+            <div className="relative min-h-[300px] lg:min-h-[460px] overflow-hidden bg-[#F7F8FA]">
+              <img
+                src="/vf-solutions/images/beratung-consulting.jpg"
+                alt={tr.common.consultingPhotoAlt}
+                className="absolute inset-0 w-full h-full object-cover object-[center_25%]"
+              />
             </div>
           </div>
         </div>
