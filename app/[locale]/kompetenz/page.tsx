@@ -103,7 +103,7 @@ export default async function Kompetenz({
           </div>
           <div className="flex flex-wrap gap-3 mt-10">
             {[
-              { label: "SolidWorks", color: "bg-[#1E6FD9]/15 text-[#93C5FD] border-[#1E6FD9]/40" },
+              { label: "SAP BAPI, RFC", color: "bg-[#1E6FD9]/15 text-[#93C5FD] border-[#1E6FD9]/40" },
               { label: "SAP PLM", color: "bg-[#7C3AED]/15 text-[#C4B5FD] border-[#7C3AED]/40" },
               { label: "SQL", color: "bg-[#D97706]/15 text-[#FCD34D] border-[#D97706]/40" },
               { label: "SolidEdge", color: "bg-[#059669]/15 text-[#6EE7B7] border-[#059669]/40" },

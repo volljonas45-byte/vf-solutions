@@ -81,7 +81,7 @@ export const T = {
       eyebrow: "Leistungen",
       heroTitle: "Beratung, Umsetzung und Stabilisierung aus einer Hand",
       heroLead:
-        "Der Schwerpunkt liegt auf CAD/PDM-Migration — ergänzt um tragfähige Prozesse und klare Systemlogik. Konzipiert und umgesetzt mitten im laufenden Betrieb, sodass das Tagesgeschäft ungestört weiterläuft.",
+        "Der Schwerpunkt liegt mittlerweile auf CAD/PDM — ergänzt um tragfähige Prozesse und klare Systemlogik. Konzipiert und umgesetzt mitten im laufenden Betrieb, sodass das Tagesgeschäft ungestört weiterläuft.",
       focusBadge: "Schwerpunkt",
       uspEyebrow: "Kommerzielle Aspekte",
       uspTitle: "Faire, transparente Konditionen",
@@ -217,7 +217,11 @@ export const T = {
       formPrivacyLink: "Datenschutzerklärung",
       formPrivacyPost: " gelesen und stimme der Verarbeitung meiner Daten zu.",
       formSubmit: "Nachricht senden",
-      formHint: "Das Formular ist noch nicht aktiv verbunden. Nutzen Sie bitte direkt",
+      formSending: "Wird gesendet …",
+      formSuccess: "Vielen Dank! Ihre Nachricht ist angekommen — wir melden uns zeitnah.",
+      formError: "Das Senden hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an",
+      formRequired: "Bitte füllen Sie Name, E-Mail und Nachricht aus und bestätigen Sie den Datenschutz.",
+      formHint: "Lieber direkt? Schreiben Sie uns an",
     },
   },
 
@@ -293,7 +297,7 @@ export const T = {
       eyebrow: "Services",
       heroTitle: "Consulting, delivery and stabilization from a single source",
       heroLead:
-        "The core focus is CAD/PDM migration — complemented by viable processes and clear system logic. Designed and delivered right in the middle of ongoing operations, so day-to-day business keeps running undisturbed.",
+        "The core focus is now on CAD/PDM — complemented by viable processes and clear system logic. Designed and delivered right in the middle of ongoing operations, so day-to-day business keeps running undisturbed.",
       focusBadge: "Core focus",
       uspEyebrow: "Commercial principles",
       uspTitle: "Fair, transparent terms",
@@ -425,7 +429,11 @@ export const T = {
       formPrivacyLink: "privacy policy",
       formPrivacyPost: " and consent to the processing of my data.",
       formSubmit: "Send message",
-      formHint: "The form is not yet connected. Please use",
+      formSending: "Sending …",
+      formSuccess: "Thank you! Your message has arrived — we will be in touch shortly.",
+      formError: "Sending failed, unfortunately. Please try again or email us directly at",
+      formRequired: "Please fill in name, email and message and confirm the privacy notice.",
+      formHint: "Prefer email? Write to us at",
     },
   },
 } as const;

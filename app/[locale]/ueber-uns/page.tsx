@@ -99,18 +99,15 @@ export default async function UeberUns({
               </div>
             </div>
 
-            {/* Placeholder */}
-            <div className="hidden lg:flex relative min-h-[480px] items-center justify-center bg-[#F7F8FA]">
-              <div className="text-center select-none">
-                <div className="w-14 h-14 border-2 border-dashed border-[#D1D5DB] rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <rect x="2" y="2" width="18" height="18" rx="2" stroke="#C4C9D4" strokeWidth="1.5"/>
-                    <circle cx="8" cy="8" r="2" stroke="#C4C9D4" strokeWidth="1.5"/>
-                    <path d="M2 15l5-4 4 3 3-3 6 5" stroke="#C4C9D4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <p className="text-[#C4C9D4] text-xs tracking-wide">{tr.common.photoFollows}</p>
-              </div>
+            {/* Foto */}
+            <div className="relative min-h-[300px] lg:min-h-[480px] overflow-hidden bg-[#F7F8FA]">
+              <img
+                src="/vf-solutions/images/ueber-arbeitsplatz.jpg"
+                alt={locale === "de"
+                  ? "Ingenieur bei der Arbeit an technischen Konstruktionszeichnungen"
+                  : "Engineer working on technical engineering drawings"}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>

@@ -2,6 +2,12 @@ export type Locale = "de" | "en";
 export const LOCALES: Locale[] = ["de", "en"];
 export const DEFAULT_LOCALE: Locale = "de";
 
+// Web3Forms access key for the contact form (https://web3forms.com — free,
+// works on the static GitHub-Pages build). Create a key with freundt@vfsolutions.de
+// and paste it here. While empty, the form falls back to opening the visitor's
+// email client (mailto) so it still works.
+export const WEB3FORMS_ACCESS_KEY = "";
+
 export const CONTACT = {
   name: "vf solutions",
   person: "Dipl.-Ing. (FH) Volker Freundt",
@@ -280,7 +286,7 @@ export const PROJEKT_FEATURES: Record<Locale, ProjektFeature[]> = {
       paragraphs: [
         "Die anwendungsorientierte Entwicklung kundenspezifischer Lösungen stellt sich trotz hohem Angebot an Standardsoftware meist als ideal heraus – schließlich lassen sich Ihre Anforderungen eher selten standardisieren …",
         "vf solutions entwickelt professionelle Lösungen für Ihre Anforderungen aus dem CAx-Umfeld: Schnittstellen, Konverter, Migrations-Tools, CAD/PPS/ERP-Kopplungen, CAD/PDM-Lösungen, CAD/PDM/Archiv-Integrationen, Teilegeneratoren sowie Varianten- und Berechnungsmodule werden nicht nur realisiert, sondern auch eingeführt und ständig optimiert.",
-        "Weitere Schwerpunkte stellen Konzeption, Entwicklung und Einführung von Datenbanken sowie die Realisierung komplexer integrierter Anwendungen dar – sehen Sie Ansatzpunkte in Ihrem Unternehmen?",
+        "Weitere Schwerpunkte stellen Konzeption, Entwicklung und Einführung von Datenbanken sowie die Realisierung komplexer integrierter Anwendungen dar.",
       ],
       ctaQuestion: "Wie sieht Ihre konkrete Aufgabenstellung aus?",
     },
@@ -327,7 +333,7 @@ export const PROJEKT_FEATURES: Record<Locale, ProjektFeature[]> = {
       paragraphs: [
         "Application-oriented development of customer-specific solutions usually turns out to be the ideal approach despite the wide range of standard software — your requirements rarely lend themselves to standardization …",
         "vf solutions develops professional solutions for your needs in the CAx environment: interfaces, converters, migration tools, CAD/PPS/ERP couplings, CAD/PDM solutions, CAD/PDM/archive integrations, part generators as well as variant and calculation modules are not only implemented but also rolled out and continuously optimized.",
-        "Further focus areas include the conception, development and rollout of databases as well as the delivery of complex integrated applications — do you see starting points in your organization?",
+        "Further focus areas include the conception, development and rollout of databases as well as the delivery of complex integrated applications.",
       ],
       ctaQuestion: "What does your specific challenge look like?",
     },

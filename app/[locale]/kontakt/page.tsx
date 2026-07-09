@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { CONTACT, LOCALES, type Locale } from "@/lib/data";
 import { t } from "@/lib/i18n";
+import ContactForm from "@/components/ContactForm";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -126,87 +127,7 @@ export default async function Kontakt({
             </div>
 
             {/* Kontaktformular */}
-            <div className="bg-white border border-[#E2E8F0] rounded-xl p-8">
-              <h2 className="text-xl font-bold text-[#0A1628] mb-2">{tr.kontakt.formTitle}</h2>
-              <p className="text-sm text-[#64748B] mb-6">{tr.kontakt.formLead}</p>
-
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
-                      {tr.kontakt.formName} *
-                    </label>
-                    <input
-                      type="text"
-                      placeholder={locale === "de" ? "Max Mustermann" : "Jane Doe"}
-                      className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
-                      {tr.kontakt.formCompany}
-                    </label>
-                    <input
-                      type="text"
-                      placeholder={locale === "de" ? "Muster GmbH" : "Acme Ltd."}
-                      className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
-                    {tr.kontakt.formEmail} *
-                  </label>
-                  <input
-                    type="email"
-                    placeholder={locale === "de" ? "m.mustermann@firma.de" : "j.doe@company.com"}
-                    className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
-                    {tr.kontakt.formPhone}
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="+49 123 456 789"
-                    className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
-                    {tr.kontakt.formMessage} *
-                  </label>
-                  <textarea
-                    rows={5}
-                    placeholder={tr.kontakt.formPlaceholderMessage}
-                    className="w-full border border-[#E2E8F0] rounded-md px-3 py-2.5 text-sm text-[#1A2332] placeholder-[#CBD5E0] focus:outline-none focus:ring-2 focus:ring-[#1E6FD9]/20 focus:border-[#1E6FD9] transition-colors resize-none"
-                  />
-                </div>
-                <div className="flex items-start gap-2">
-                  <input type="checkbox" id="dsgvo" className="mt-1 accent-[#1E6FD9]" />
-                  <label htmlFor="dsgvo" className="text-xs text-[#64748B] leading-relaxed">
-                    {tr.kontakt.formPrivacyPre}
-                    <a href={`/${locale}/datenschutz`} className="text-[#1E6FD9] hover:underline">
-                      {tr.kontakt.formPrivacyLink}
-                    </a>
-                    {tr.kontakt.formPrivacyPost}
-                  </label>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-[#0A1628] text-white py-3 rounded-md font-semibold text-sm hover:bg-[#122040] transition-colors"
-                >
-                  {tr.kontakt.formSubmit}
-                </button>
-                <p className="text-xs text-[#94A3B8] text-center">
-                  {tr.kontakt.formHint}{" "}
-                  <a href={`mailto:${CONTACT.email}`} className="text-[#1E6FD9] hover:underline">
-                    {CONTACT.email}
-                  </a>
-                </p>
-              </form>
-            </div>
+            <ContactForm locale={locale} />
           </div>
         </div>
       </section>
