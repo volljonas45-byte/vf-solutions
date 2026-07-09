@@ -27,11 +27,11 @@ export const T = {
       ctaAllServices: "Alle Leistungen ansehen",
       ctaContact: "Kontakt aufnehmen",
       ctaContactNow: "Jetzt Kontakt aufnehmen",
-      ctaAllRefs: "Alle 43 ansehen",
+      ctaAllRefs: "Alle 45 ansehen",
       ctaViewProjects: "Projekte ansehen",
-      since1989: "Seit 1989 aktiv · 200+ Projekte · 43+ Referenzkunden",
+      since1989: "Seit 1989 aktiv · 200+ Projekte · 45 Referenzkunden",
       photoFollows: "Foto folgt",
-      consultingPhotoAlt: "Berater von vf solutions im Gespräch mit einer Kundin",
+      consultingPhotoAlt: "Zirkel auf einer technischen Konstruktionszeichnung",
       eyebrowConsulting: "Unabhängige technische Beratung · seit 1989",
     },
 
@@ -50,11 +50,11 @@ export const T = {
     // Home
     home: {
       title: "vf solutions | CAD- und PDM-Beratung & Migration",
-      description: "Über 35 Jahre Erfahrung in CAD- und PDM-Projekten für den Maschinen- und Anlagenbau. Schwerpunkt CAD/PDM-Migration. 200+ Projekte, 43+ Referenzkunden. 100% anbieterneutral.",
+      description: "Über 35 Jahre Erfahrung in CAD- und PDM-Projekten für den Maschinen- und Anlagenbau. Schwerpunkt CAD/PDM-Migration. 200+ Projekte, 45 Referenzkunden. 100% anbieterneutral.",
       heroHeadlineA: "CAD, PDM und ERP —",
-      heroHeadlineB: "aus einer Hand.",
+      heroHeadlineB: "sicher migriert, sauber vernetzt.",
       heroLead:
-        "Seit 1989 begleitet vf solutions Unternehmen im Maschinen- und Anlagenbau bei Analyse, Konzeption, Entwicklung und controllingfester Umsetzung im CAD-, PDM- und ERP-Umfeld — zu 100 % anbieterneutral.",
+        "Seit 1989 überführt vf solutions gewachsene CAD-, PDM- und ERP-Datenbestände zuverlässig in neue Systeme — anbieterneutral beraten, controllingfest umgesetzt und ohne Stillstand im laufenden Betrieb.",
       philoTitleA: "100 % unabhängig.",
       philoTitleB: "100 % kundenorientiert.",
       philoP1:
@@ -68,7 +68,7 @@ export const T = {
       servicesTitleB: "und Stabilisierung",
       servicesLead:
         "Von der Analyse bestehender Systemlandschaften bis zur langfristigen Stabilisierung im laufenden Betrieb — mit klarem Schwerpunkt auf CAD/PDM-Migration.",
-      refsTitle: "43 Referenzkunden",
+      refsTitle: "45 Referenzkunden",
       refsLead: "Namhafte Unternehmen des deutschen Maschinen- und Anlagenbaus — von Mittelstand bis Konzern.",
       ctaTitle: "Wie sieht Ihre Aufgabenstellung aus?",
       ctaLead: "Ein direktes Gespräch klärt meist schnell, ob und wie vf solutions helfen kann.",
@@ -97,7 +97,7 @@ export const T = {
     // Projekte
     projekte: {
       title: "Projekte & Referenzkunden | vf solutions",
-      description: "200+ erfolgreich realisierte Projekte. Schwerpunkt CAD/PDM-Migration. 43+ Referenzkunden aus dem deutschen Maschinenbau.",
+      description: "200+ erfolgreich realisierte Projekte. Schwerpunkt CAD/PDM-Migration. 45 Referenzkunden aus dem deutschen Maschinenbau.",
       eyebrow: "Projekte & Referenzen",
       heroTitleA: "200+ Projekte.",
       heroTitleB: "Seit 1989.",
@@ -107,7 +107,7 @@ export const T = {
         { value: "200+", label: "Projekte gesamt" },
         { value: "50+", label: "CAD-Systemwechsel" },
         { value: "1989", label: "Erstes Projekt" },
-        { value: "43+", label: "Referenzkunden" },
+        { value: "45", label: "Referenzkunden" },
       ],
       areasEyebrow: "Projektschwerpunkte",
       areasTitle: "Systemwechsel, Entwicklung & Klassifizierung",
@@ -117,7 +117,7 @@ export const T = {
       nutzen: "Nutzen",
       focusBadge: "Schwerpunkt",
       refsEyebrow: "Referenzkunden",
-      refsTitle: "43+ namhafte Unternehmen",
+      refsTitle: "45 namhafte Unternehmen",
       refsLead:
         "Aus Maschinenbau, Anlagenbau, Medizintechnik, Automobilzulieferung und weiteren Branchen — überwiegend mittelständische Unternehmen in Deutschland, Österreich und der Schweiz.",
       ctaTitle: "Werden Sie der nächste Referenzkunde.",
@@ -242,11 +242,11 @@ export const T = {
       ctaAllServices: "View all services",
       ctaContact: "Get in touch",
       ctaContactNow: "Get in touch now",
-      ctaAllRefs: "View all 43",
+      ctaAllRefs: "View all 45",
       ctaViewProjects: "View projects",
-      since1989: "Active since 1989 · 200+ projects · 43+ reference clients",
+      since1989: "Active since 1989 · 200+ projects · 45 reference clients",
       photoFollows: "Photo to follow",
-      consultingPhotoAlt: "vf solutions advisor in conversation with a client",
+      consultingPhotoAlt: "Compass on a technical engineering drawing",
       eyebrowConsulting: "Independent technical consulting · since 1989",
     },
 
@@ -263,11 +263,11 @@ export const T = {
 
     home: {
       title: "vf solutions | CAD & PDM consulting and migration",
-      description: "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 200+ projects, 43+ reference clients. 100% vendor-neutral.",
+      description: "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 200+ projects, 45 reference clients. 100% vendor-neutral.",
       heroHeadlineA: "CAD, PDM and ERP —",
-      heroHeadlineB: "from a single source.",
+      heroHeadlineB: "safely migrated, cleanly connected.",
       heroLead:
-        "Since 1989, vf solutions has supported companies in mechanical and plant engineering with analysis, concept design, development and controllable delivery across CAD, PDM and ERP — 100% vendor-neutral.",
+        "Since 1989, vf solutions has reliably migrated grown CAD, PDM and ERP data into new systems — vendor-neutral advice, controllable delivery and no standstill in day-to-day operations.",
       philoTitleA: "100% independent.",
       philoTitleB: "100% client-focused.",
       philoP1:
@@ -281,7 +281,7 @@ export const T = {
       servicesTitleB: "and stabilization",
       servicesLead:
         "From analysis of existing system landscapes to long-term stabilization in daily operation — with a clear focus on CAD/PDM migration.",
-      refsTitle: "43 reference clients",
+      refsTitle: "45 reference clients",
       refsLead: "Renowned companies from German mechanical and plant engineering — from SMEs to corporate groups.",
       ctaTitle: "What's your challenge?",
       ctaLead: "A direct conversation usually clarifies quickly whether and how vf solutions can help.",
@@ -308,7 +308,7 @@ export const T = {
 
     projekte: {
       title: "Projects & reference clients | vf solutions",
-      description: "200+ successfully delivered projects. Core focus: CAD/PDM migration. 43+ reference clients from German mechanical engineering.",
+      description: "200+ successfully delivered projects. Core focus: CAD/PDM migration. 45 reference clients from German mechanical engineering.",
       eyebrow: "Projects & references",
       heroTitleA: "200+ projects.",
       heroTitleB: "Since 1989.",
@@ -318,7 +318,7 @@ export const T = {
         { value: "200+", label: "Projects in total" },
         { value: "50+", label: "CAD system changes" },
         { value: "1989", label: "First project" },
-        { value: "43+", label: "Reference clients" },
+        { value: "45", label: "Reference clients" },
       ],
       areasEyebrow: "Project focus",
       areasTitle: "System migration, development & classification",
@@ -328,7 +328,7 @@ export const T = {
       nutzen: "Benefit",
       focusBadge: "Core focus",
       refsEyebrow: "Reference clients",
-      refsTitle: "43+ renowned companies",
+      refsTitle: "45 renowned companies",
       refsLead:
         "From mechanical engineering, plant engineering, medical technology, automotive supply and other industries — predominantly mid-sized companies in Germany, Austria and Switzerland.",
       ctaTitle: "Become the next reference client.",

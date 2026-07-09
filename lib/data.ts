@@ -21,13 +21,13 @@ export const STATS: Record<Locale, { value: string; label: string; sub: string }
     { value: "35+", label: "Jahre Erfahrung", sub: "Aktiv seit 1989" },
     { value: "200+", label: "Projekte", sub: "Erfolgreich abgeschlossen" },
     { value: "50+", label: "Systemwechsel", sub: "CAD-Systemmigrationen" },
-    { value: "44+", label: "Referenzkunden", sub: "Namhafte Unternehmen" },
+    { value: "45", label: "Referenzkunden", sub: "Namhafte Unternehmen" },
   ],
   en: [
     { value: "35+", label: "Years of experience", sub: "Active since 1989" },
     { value: "200+", label: "Projects", sub: "Successfully completed" },
     { value: "50+", label: "System migrations", sub: "CAD system migrations" },
-    { value: "44+", label: "Reference clients", sub: "Renowned companies" },
+    { value: "45", label: "Reference clients", sub: "Renowned companies" },
   ],
 };
 
@@ -106,7 +106,7 @@ export const LEISTUNGEN: Record<Locale, {
       number: "06",
       tag: "KLS",
       title: "Sachnummernsysteme",
-      desc: "In vielen Konstruktions- und Entwicklungsabteilungen werden häufig unnötig viele Neuteile eingeführt, obwohl meist der Verdacht auf Existenz identischer oder zumindest ähnlicher Teile besteht. Diese Wiederhol- oder Ähnlichteile lassen sich methodisch sauber nur über eine unternehmensweit gültige Klassifizierung auffinden — Sachmerkmale unterstützen im Bedarfsfall die Feinauswahl. vf solutions entwickelt, implementiert und stabilisiert klassifizierungsbasierende Sachnummernsysteme — auch in Ihrem Unternehmen?",
+      desc: "Entwicklung, Implementierung und Stabilisierung unternehmensweit gültiger Klassifizierungen zur nachhaltigen Reduzierung der Teilevielfalt. Wildwuchs-Stopp: Vermeidung unnötiger Neuteile durch Ähnlichkeitssuche. Systematische Suche: methodisch sauberes Auffinden über zentrale Klassifizierung. Effiziente Feinauswahl: schnelles Identifizieren passender Teile durch Sachmerkmale.",
       bullets: [
         "Iststandsanalyse & Klassifizierungskonzept",
         "Sachmerkmalsleisten",
@@ -181,7 +181,7 @@ export const LEISTUNGEN: Record<Locale, {
       number: "06",
       tag: "CLS",
       title: "Part numbering systems",
-      desc: "In many design and engineering departments, far too many new parts are created — even though identical or at least similar parts very likely already exist. These repeat or similar parts can only be found methodically through a company-wide classification — part characteristics support the fine selection where needed. vf solutions develops, implements and stabilizes classification-based part numbering systems — in your company too?",
+      desc: "Development, implementation and stabilization of company-wide classifications to sustainably reduce part variety. Stop the sprawl: avoid unnecessary new parts through similarity search. Systematic search: methodically clean retrieval via central classification. Efficient fine selection: quickly identify matching parts through part characteristics.",
       bullets: [
         "Current-state analysis & classification concept",
         "Part characteristic structures",
@@ -387,6 +387,7 @@ export const REFERENZKUNDEN_DOMAINS: Record<string, string> = {
   "SEW-EURODRIVE GmbH & Co. KG": "sew-eurodrive.com",
   "NEOPERL GmbH": "neoperl.com",
   "TII Scheuerle Fahrzeugfabrik GmbH": "scheuerle.com",
+  "TII KAMAG Transporttechnik GmbH & Co. KG": "tii-group.com",
   "Toyota Automated Logistics Systems GmbH": "toyota-automated-logistics.com",
   "Jecture GmbH": "jecture.com",
   "KH TEC GmbH": "kh-tec.com",
@@ -451,6 +452,7 @@ export const REFERENZKUNDEN = [
   "SEW-EURODRIVE GmbH & Co. KG",
   "NEOPERL GmbH",
   "TII Scheuerle Fahrzeugfabrik GmbH",
+  "TII KAMAG Transporttechnik GmbH & Co. KG",
   "KH TEC GmbH",
 ];
 

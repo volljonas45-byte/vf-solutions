@@ -38,7 +38,7 @@ export default async function Home({
       <section className="relative bg-[#0A1628] min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/hero-machining.jpg"
+            src="/vf-solutions/images/hero-cad.jpg"
             alt=""
             className="w-full h-full object-cover object-center opacity-35"
           />
@@ -124,7 +124,7 @@ export default async function Home({
 
             <div className="relative min-h-[300px] lg:min-h-[460px] overflow-hidden bg-[#F7F8FA]">
               <img
-                src="/vf-solutions/images/beratung-consulting.jpg"
+                src="/vf-solutions/images/philosophie-blueprint.jpg"
                 alt={tr.common.consultingPhotoAlt}
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
