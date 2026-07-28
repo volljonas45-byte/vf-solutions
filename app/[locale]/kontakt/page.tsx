@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { CONTACT, LOCALES, type Locale } from "@/lib/data";
 import { t } from "@/lib/i18n";
 import ContactForm from "@/components/ContactForm";
+import { asset } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -55,7 +56,7 @@ export default async function Kontakt({
               <div className="bg-white border border-[#E2E8F0] rounded-xl p-8 mb-6">
                 <div className="flex items-start gap-4 mb-6 pb-6 border-b border-[#E2E8F0]">
                   <div className="h-12 px-3 rounded-lg bg-white border border-[#E2E8F0] flex items-center justify-center shrink-0">
-                    <img src="/vf-solutions/images/logo-vf.png" alt="vf solutions" className="h-8 w-auto object-contain" />
+                    <img src={asset("/images/logo-vf.png")} alt="vf solutions" className="h-8 w-auto object-contain" />
                   </div>
                   <div>
                     <h2 className="font-bold text-[#0A1628]">{CONTACT.name}</h2>

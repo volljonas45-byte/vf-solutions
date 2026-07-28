@@ -13,6 +13,7 @@ import {
 } from "@/lib/data";
 import { t } from "@/lib/i18n";
 import LogoCell from "@/components/LogoCell";
+import { asset } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -38,7 +39,7 @@ export default async function Home({
       <section className="relative bg-[#0A1628] min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/hero-cad.jpg"
+            src={asset("/images/hero-cad.jpg")}
             alt=""
             className="w-full h-full object-cover object-center opacity-35"
           />
@@ -124,7 +125,7 @@ export default async function Home({
 
             <div className="relative min-h-[300px] lg:min-h-[460px] overflow-hidden bg-[#F7F8FA]">
               <img
-                src="/vf-solutions/images/philosophie-blueprint.jpg"
+                src={asset("/images/philosophie-blueprint.jpg")}
                 alt={tr.common.consultingPhotoAlt}
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
@@ -205,7 +206,7 @@ export default async function Home({
       <section className="relative bg-[#0A1628] section overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/precision-detail.jpg"
+            src={asset("/images/precision-detail.jpg")}
             alt=""
             className="w-full h-full object-cover opacity-10"
           />

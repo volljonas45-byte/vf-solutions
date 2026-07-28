@@ -10,6 +10,7 @@ import {
   type Locale,
 } from "@/lib/data";
 import { t } from "@/lib/i18n";
+import { asset } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -85,7 +86,7 @@ export default async function Kompetenz({
       <section className="relative bg-[#0A1628] py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/kompetenz-hero.jpg"
+            src={asset("/images/kompetenz-hero.jpg")}
             alt=""
             className="w-full h-full object-cover object-center opacity-25"
           />
@@ -103,10 +104,10 @@ export default async function Kompetenz({
           </div>
           <div className="flex flex-wrap gap-3 mt-10">
             {[
-              { label: "SAP BAPI, RFC", color: "bg-[#1E6FD9]/15 text-[#93C5FD] border-[#1E6FD9]/40" },
+              { label: "SolidWorks", color: "bg-[#1E6FD9]/15 text-[#93C5FD] border-[#1E6FD9]/40" },
               { label: "SAP PLM", color: "bg-[#7C3AED]/15 text-[#C4B5FD] border-[#7C3AED]/40" },
               { label: "SQL", color: "bg-[#D97706]/15 text-[#FCD34D] border-[#D97706]/40" },
-              { label: "SolidEdge", color: "bg-[#059669]/15 text-[#6EE7B7] border-[#059669]/40" },
+              { label: "SAP BAPI", color: "bg-[#059669]/15 text-[#6EE7B7] border-[#059669]/40" },
               { label: "Oracle", color: "bg-[#DC2626]/15 text-[#FCA5A5] border-[#DC2626]/40" },
             ].map((s) => (
               <span

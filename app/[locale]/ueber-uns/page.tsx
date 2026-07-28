@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { KARRIERE, PARTNER, CONTACT, LOCALES, type Locale } from "@/lib/data";
 import { t } from "@/lib/i18n";
 import PartnerCard from "@/components/PartnerCard";
+import { asset } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -38,7 +39,7 @@ export default async function UeberUns({
       <section className="relative bg-[#0A1628] min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/hero-ueber.jpg"
+            src={asset("/images/hero-ueber.jpg")}
             alt=""
             className="w-full h-full object-cover object-center opacity-30"
           />
@@ -102,7 +103,7 @@ export default async function UeberUns({
             {/* Foto */}
             <div className="relative min-h-[300px] lg:min-h-[480px] overflow-hidden bg-[#F7F8FA]">
               <img
-                src="/vf-solutions/images/ueber-arbeitsplatz.jpg"
+                src={asset("/images/ueber-arbeitsplatz.jpg")}
                 alt={locale === "de"
                   ? "Ingenieur bei der Arbeit an technischen Konstruktionszeichnungen"
                   : "Engineer working on technical engineering drawings"}

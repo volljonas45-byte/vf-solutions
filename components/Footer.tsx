@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CONTACT, type Locale } from "@/lib/data";
 import { t } from "@/lib/i18n";
+import { asset } from "@/lib/basePath";
 
 export default function Footer({ locale }: { locale: Locale }) {
   const tr = t(locale);
@@ -22,7 +23,7 @@ export default function Footer({ locale }: { locale: Locale }) {
           <div className="md:col-span-2">
             <div className="mb-4">
               <img
-                src="/vf-solutions/images/logo-vf.png"
+                src={asset("/images/logo-vf.png")}
                 alt="vf solutions"
                 className="h-[42px] w-auto object-contain brightness-0 invert"
               />

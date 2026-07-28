@@ -1,3 +1,5 @@
+import { asset } from "@/lib/basePath";
+
 export type Locale = "de" | "en";
 export const LOCALES: Locale[] = ["de", "en"];
 export const DEFAULT_LOCALE: Locale = "de";
@@ -403,15 +405,15 @@ export const REFERENZKUNDEN_DOMAINS: Record<string, string> = {
 // fallback in LogoCell. `bg` sets the tile colour (default white); use a coloured
 // tile for white/transparent logos so they stay visible.
 export const REFERENZKUNDEN_LOGOS: Record<string, { src: string; bg?: string }> = {
-  "TII Scheuerle Fahrzeugfabrik GmbH": { src: "/vf-solutions/images/logos/scheuerle.png" },
-  "Bickel Blechtechnik GmbH": { src: "/vf-solutions/images/logos/bickel.svg" },
-  "ILLIG packaging solutions GmbH": { src: "/vf-solutions/images/logos/illig.png", bg: "#2b5797" },
-  "GEWEFA Josef C.Pfister GmbH & Co.KG": { src: "/vf-solutions/images/logos/gewefa.jpg" },
-  "DATRON AG": { src: "/vf-solutions/images/logos/datron.png" },
-  "Novotechnik Messwertaufnehmer OHG": { src: "/vf-solutions/images/logos/novotechnik.png" },
-  "PIA Automation Holding GmbH": { src: "/vf-solutions/images/logos/pia.png" },
-  "SEW-EURODRIVE GmbH & Co. KG": { src: "/vf-solutions/images/logos/sew.svg" },
-  "Linnemann GmbH": { src: "/vf-solutions/images/logos/linnemann.svg" },
+  "TII Scheuerle Fahrzeugfabrik GmbH": { src: asset("/images/logos/scheuerle.png") },
+  "Bickel Blechtechnik GmbH": { src: asset("/images/logos/bickel.svg") },
+  "ILLIG packaging solutions GmbH": { src: asset("/images/logos/illig.png"), bg: "#2b5797" },
+  "GEWEFA Josef C.Pfister GmbH & Co.KG": { src: asset("/images/logos/gewefa.jpg") },
+  "DATRON AG": { src: asset("/images/logos/datron.png") },
+  "Novotechnik Messwertaufnehmer OHG": { src: asset("/images/logos/novotechnik.png") },
+  "PIA Automation Holding GmbH": { src: asset("/images/logos/pia.png") },
+  "SEW-EURODRIVE GmbH & Co. KG": { src: asset("/images/logos/sew.svg") },
+  "Linnemann GmbH": { src: asset("/images/logos/linnemann.svg") },
 };
 
 export const REFERENZKUNDEN = [

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { type Locale } from "@/lib/data";
 import { t } from "@/lib/i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { asset } from "@/lib/basePath";
 
 export default function Navigation({ locale }: { locale: Locale }) {
   const pathname = usePathname();
@@ -34,7 +35,7 @@ export default function Navigation({ locale }: { locale: Locale }) {
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center">
           <img
-            src="/vf-solutions/images/logo-vf.png"
+            src={asset("/images/logo-vf.png")}
             alt="vf solutions"
             className="h-[66px] w-auto object-contain"
           />

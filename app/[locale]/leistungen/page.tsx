@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LEISTUNGEN, LOCALES, type Locale } from "@/lib/data";
 import { t } from "@/lib/i18n";
+import { asset } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -35,7 +36,7 @@ export default async function Leistungen({
       <section className="relative bg-[#0A1628] py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/vf-solutions/images/leistungen-hero.jpg"
+            src={asset("/images/leistungen-hero.jpg")}
             alt=""
             className="w-full h-full object-cover object-center opacity-30"
           />
