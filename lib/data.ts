@@ -114,7 +114,7 @@ export const LEISTUNGEN: Record<Locale, {
       number: "06",
       tag: "KLS",
       title: "Sachnummernsysteme",
-      desc: "Entwicklung, Implementierung und Stabilisierung unternehmensweit gültiger Klassifizierungen zur nachhaltigen Reduzierung der Teilevielfalt. Wildwuchs-Stopp: Vermeidung unnötiger Neuteile durch Ähnlichkeitssuche. Systematische Suche: methodisch sauberes Auffinden über zentrale Klassifizierung. Effiziente Feinauswahl: schnelles Identifizieren passender Teile durch Sachmerkmale.",
+      desc: "Wildwuchs-Stopp durch Ähnlichkeitssuche, systematische Suche über zentrale Klassifizierung, effiziente Feinauswahl anhand von Sachmerkmalen.",
       bullets: [
         "Iststandsanalyse & Klassifizierungskonzept",
         "Sachmerkmalsleisten",
@@ -189,7 +189,7 @@ export const LEISTUNGEN: Record<Locale, {
       number: "06",
       tag: "CLS",
       title: "Part numbering systems",
-      desc: "Development, implementation and stabilization of company-wide classifications to sustainably reduce part variety. Stop the sprawl: avoid unnecessary new parts through similarity search. Systematic search: methodically clean retrieval via central classification. Efficient fine selection: quickly identify matching parts through part characteristics.",
+      desc: "Stop part sprawl through similarity search, systematic retrieval via central classification, efficient fine selection based on part characteristics.",
       bullets: [
         "Current-state analysis & classification concept",
         "Part characteristic structures",

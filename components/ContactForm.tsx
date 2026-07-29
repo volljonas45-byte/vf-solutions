@@ -33,6 +33,7 @@ export default function ContactForm({ locale }: { locale: Locale }) {
 
     const company = (data.get("company") as string)?.trim() ?? "";
     const phone = (data.get("phone") as string)?.trim() ?? "";
+    const service = (data.get("service") as string) ?? "";
 
     // No Web3Forms key configured yet → fall back to the visitor's email client.
     if (!WEB3FORMS_ACCESS_KEY) {
@@ -45,6 +46,7 @@ export default function ContactForm({ locale }: { locale: Locale }) {
         `${k.formCompany}: ${company}`,
         `${k.formEmail}: ${email}`,
         `${k.formPhone}: ${phone}`,
+        `${k.formService}: ${service}`,
         "",
         message,
       ];
@@ -73,6 +75,7 @@ export default function ContactForm({ locale }: { locale: Locale }) {
           company,
           email,
           phone,
+          service,
           message,
         }),
       });
@@ -152,6 +155,19 @@ export default function ContactForm({ locale }: { locale: Locale }) {
             {k.formPhone}
           </label>
           <input type="tel" name="phone" placeholder="+49 123 456 789" className={inputClass} />
+        </div>
+        <div>
+          <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">
+            {k.formService}
+          </label>
+          <select name="service" defaultValue="" className={`${inputClass} bg-white`}>
+            <option value="">{k.formServicePlaceholder}</option>
+            {k.formServiceOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
         <div>
           <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">

@@ -52,7 +52,7 @@ export const T = {
       title: "vf solutions | CAD- und PDM-Beratung & Migration",
       description: "Über 35 Jahre Erfahrung in CAD- und PDM-Projekten für den Maschinen- und Anlagenbau. Schwerpunkt CAD/PDM-Migration. 200+ Projekte, 45 Referenzkunden. 100% anbieterneutral.",
       heroHeadlineA: "CAD, PDM und ERP —",
-      heroHeadlineB: "sicher migriert, sauber vernetzt.",
+      heroHeadlineB: "sicher migriert, sauber vernetzt, gezielt optimiert.",
       heroLead:
         "Seit 1989 überführt vf solutions gewachsene CAD-, PDM- und ERP-Datenbestände zuverlässig in neue Systeme — anbieterneutral beraten, controllingfest umgesetzt und ohne Stillstand im laufenden Betrieb.",
       philoTitleA: "100 % unabhängig.",
@@ -158,7 +158,7 @@ export const T = {
       heroTitle: "Unabhängige Beratung für stabile technische Prozesse",
       heroLead:
         "vf solutions steht für system- und anbieterneutrale Beratung im CAD- und PDM-Umfeld. Im Mittelpunkt stehen stabile Prozesse und eine realistische Umsetzung im laufenden Betrieb.",
-      role: "Inhaber · Berater · Projektleiter",
+      role: "Beratung · Entwicklung · Erfolg",
       facts: [
         { label: "Ausbildung", value: "Maschinenbau (FH)" },
         { label: "Erfahrung", value: "35+ Jahre CAD/PDM" },
@@ -196,7 +196,7 @@ export const T = {
       eyebrow: "Kontakt",
       heroTitle: "Projekt oder Prozessfrage besprechen",
       heroLead:
-        "Ein direkter Austausch klärt meist schnell, ob und wie vf solutions ein technisches Vorhaben sinnvoll unterstützen kann.",
+        "Ein direkter Austausch klärt meist schnell, ob und wie vf solutions Ihr Anliegen sinnvoll unterstützen kann.",
       availability: "Kurzfristig nach Vereinbarung",
       addressLabel: "Standort",
       phoneLabel: "Telefon",
@@ -211,6 +211,16 @@ export const T = {
       formCompany: "Unternehmen",
       formEmail: "E-Mail",
       formPhone: "Telefon",
+      formService: "Leistung",
+      formServicePlaceholder: "Bitte wählen …",
+      formServiceOptions: [
+        "CAD/PDM-Migration",
+        "CAD/PDM-Beratung & Analyse",
+        "Prozessanalyse & Konzeption",
+        "Realisierung",
+        "Anwendungsentwicklung & Schnittstellen",
+        "Sachnummernsysteme",
+      ],
       formMessage: "Ihre Aufgabenstellung",
       formPlaceholderMessage: "Bitte schildern Sie kurz, womit wir Ihnen helfen können …",
       formPrivacyPre: "Ich habe die ",
@@ -269,7 +279,7 @@ export const T = {
       title: "vf solutions | CAD & PDM consulting and migration",
       description: "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 200+ projects, 45 reference clients. 100% vendor-neutral.",
       heroHeadlineA: "CAD, PDM and ERP —",
-      heroHeadlineB: "safely migrated, cleanly connected.",
+      heroHeadlineB: "safely migrated, cleanly connected, precisely optimized.",
       heroLead:
         "Since 1989, vf solutions has reliably migrated grown CAD, PDM and ERP data into new systems — vendor-neutral advice, controllable delivery and no standstill in day-to-day operations.",
       philoTitleA: "100% independent.",
@@ -371,7 +381,7 @@ export const T = {
       heroTitle: "Independent consulting for stable technical processes",
       heroLead:
         "vf solutions stands for system- and vendor-neutral consulting in the CAD and PDM space. The focus is on stable processes and realistic delivery during ongoing operations.",
-      role: "Owner · consultant · project lead",
+      role: "Consulting · development · success",
       facts: [
         { label: "Education", value: "Mechanical Engineering (FH)" },
         { label: "Experience", value: "35+ years CAD/PDM" },
@@ -408,7 +418,7 @@ export const T = {
       eyebrow: "Contact",
       heroTitle: "Discuss your project or process question",
       heroLead:
-        "A direct exchange usually clarifies quickly whether and how vf solutions can sensibly support a technical initiative.",
+        "A direct exchange usually clarifies quickly whether and how vf solutions can sensibly support your request.",
       availability: "Available on short notice by arrangement",
       addressLabel: "Location",
       phoneLabel: "Phone",
@@ -423,6 +433,16 @@ export const T = {
       formCompany: "Company",
       formEmail: "Email",
       formPhone: "Phone",
+      formService: "Service",
+      formServicePlaceholder: "Please select …",
+      formServiceOptions: [
+        "CAD/PDM migration",
+        "CAD/PDM consulting & analysis",
+        "Process analysis & concept design",
+        "Delivery",
+        "Custom development & interfaces",
+        "Part numbering systems",
+      ],
       formMessage: "Your challenge",
       formPlaceholderMessage: "Please describe briefly how we can help …",
       formPrivacyPre: "I have read the ",
