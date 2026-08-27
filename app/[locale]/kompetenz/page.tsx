@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   CAD_SYSTEME,
   PDM_SYSTEME,
+  ERP_SYSTEME,
   PROGRAMMIERUNG,
   API_SYSTEME,
   DATENBANKEN,
@@ -53,6 +54,14 @@ export default async function Kompetenz({
       items: PDM_SYSTEME,
       color: "text-[#7C3AED] bg-[#F5F3FF] border-[#DDD6FE]",
       solid: "#7C3AED",
+    },
+    {
+      title: tr.kompetenz.erpTitle,
+      tag: "ERP",
+      count: ERP_SYSTEME.length,
+      items: ERP_SYSTEME,
+      color: "text-[#0891B2] bg-[#ECFEFF] border-[#A5F3FC]",
+      solid: "#0891B2",
     },
     {
       title: tr.kompetenz.progTitle,
@@ -106,6 +115,7 @@ export default async function Kompetenz({
             {[
               { label: "SolidWorks", color: "bg-[#1E6FD9]/15 text-[#93C5FD] border-[#1E6FD9]/40" },
               { label: "SAP PLM", color: "bg-[#7C3AED]/15 text-[#C4B5FD] border-[#7C3AED]/40" },
+              { label: "SAP", color: "bg-[#0891B2]/15 text-[#67E8F9] border-[#0891B2]/40" },
               { label: "SQL", color: "bg-[#D97706]/15 text-[#FCD34D] border-[#D97706]/40" },
               { label: "SAP BAPI", color: "bg-[#059669]/15 text-[#6EE7B7] border-[#059669]/40" },
               { label: "Oracle", color: "bg-[#DC2626]/15 text-[#FCA5A5] border-[#DC2626]/40" },
@@ -182,7 +192,7 @@ export default async function Kompetenz({
               {tr.kompetenz.overviewTitle}
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {GRUPPEN.map((g) => (
               <div
                 key={g.title}

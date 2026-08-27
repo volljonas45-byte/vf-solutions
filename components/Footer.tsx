@@ -25,7 +25,7 @@ export default function Footer({ locale }: { locale: Locale }) {
               <img
                 src={asset("/images/logo-vf.png")}
                 alt="vf solutions"
-                className="h-[42px] w-auto object-contain brightness-0 invert"
+                className="h-[34px] w-auto object-contain brightness-0 invert"
               />
             </div>
             <p className="text-[#94A3B8] text-sm leading-relaxed max-w-xs">

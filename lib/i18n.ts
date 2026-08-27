@@ -52,15 +52,15 @@ export const T = {
       title: "vf solutions | CAD- und PDM-Beratung & Migration",
       description: "Über 35 Jahre Erfahrung in CAD- und PDM-Projekten für den Maschinen- und Anlagenbau. Schwerpunkt CAD/PDM-Migration. 200+ Projekte, 45 Referenzkunden. 100% anbieterneutral.",
       heroHeadlineA: "CAD, PDM und ERP —",
-      heroHeadlineB: "sicher migriert, sauber vernetzt, gezielt optimiert.",
+      heroHeadlineB: "gezielt optimiert, nahtlos verknüpft, sicher migriert.",
       heroLead:
-        "Seit 1989 überführt vf solutions gewachsene CAD-, PDM- und ERP-Datenbestände zuverlässig in neue Systeme — anbieterneutral beraten, controllingfest umgesetzt und ohne Stillstand im laufenden Betrieb.",
+        "Seit über 35 Jahren begleitet vf solutions erfolgreiche Projekte im Maschinen- und Anlagenbau — von der Konstruktion bis zur Organisation. Immer anbieterneutral beraten, controllingfest umgesetzt und ohne Stillstand im laufenden Betrieb.",
       philoTitleA: "100 % unabhängig.",
       philoTitleB: "100 % kundenorientiert.",
       philoP1:
-        "vf solutions steht seit über 20 Jahren für erfolgreiche Projekte im CAD/PDM/ERP-Umfeld von Konstruktion, Entwicklung und Organisation in Unternehmen des Maschinen- und Anlagenbaus.",
+        "vf solutions ist zu 100 % system- und anbieterneutral aufgestellt und somit völlig unabhängig von Herstellern und deren Produkten.",
       philoP2:
-        "vf solutions ist zu 100 % system- und anbieterneutral aufgestellt und somit unabhängig von Herstellern und deren Produkten. vf solutions versteht sich allein als Anwalt der Interessen der Kunden und steht diesen mit Beratung, Entwicklung und controllingfester Realisierung zur Seite.",
+        "vf solutions versteht sich als Anwalt Ihrer Interessen und steht Ihnen bei Beratung, Entwicklung und controllingfester Realisierung zur Seite.",
       philoP3Pre: "Sämtliche Projekte laufen ohne signifikante Störung des Tagesbetriebs. Die Ergebnisse sind ",
       philoP3Strong: "controlling-fest",
       philoP3Post: " — messbar, nachweisbar und praxistauglich.",
@@ -81,7 +81,7 @@ export const T = {
       eyebrow: "Leistungen",
       heroTitle: "Beratung, Umsetzung und Stabilisierung aus einer Hand",
       heroLead:
-        "Der Schwerpunkt liegt mittlerweile auf CAD/PDM — ergänzt um tragfähige Prozesse und klare Systemlogik. Konzipiert und umgesetzt mitten im laufenden Betrieb, sodass das Tagesgeschäft ungestört weiterläuft.",
+        "Im Schwerpunkt liegen mittlerweile CAD/PDM-Migrationen — ergänzt um tragfähige Prozesse und klare Systemlogik. Konzipiert und umgesetzt mitten im laufenden Betrieb, sodass das Tagesgeschäft ungestört weiterläuft.",
       focusBadge: "Schwerpunkt",
       uspEyebrow: "Kommerzielle Aspekte",
       uspTitle: "Faire, transparente Konditionen",
@@ -102,7 +102,7 @@ export const T = {
       heroTitleA: "200+ Projekte.",
       heroTitleB: "Seit 1989.",
       heroLead:
-        "vf solutions hat seit 1989 weit über 200 Projekte erfolgreich realisiert — mit klarem Schwerpunkt auf CAD/PDM-Migration sowie ergänzend Anwendungsentwicklung, Sachnummerung und CAD/PDM-Einführungen.",
+        "vf solutions hat seit 1989 weit über 200 Projekte erfolgreich realisiert. Neben dem klaren Schwerpunkt auf CAD/PDM-Migrationen umfasst das Leistungsspektrum die Bereiche Anwendungsentwicklung, CAD/PDM-Einführungen und Sachnummerung.",
       stats: [
         { value: "200+", label: "Projekte gesamt" },
         { value: "50+", label: "CAD-Systemwechsel" },
@@ -131,10 +131,11 @@ export const T = {
       eyebrow: "Technische Kompetenz",
       heroTitle: "Systemtiefe aus 35 Jahren Praxis",
       heroLead:
-        "Kenntnisse in über 35 Softwaresystemen — CAD, PDM, API-Programmierung und Datenbanken. Kein theoretisches Wissen, sondern nachgewiesene Projekterfahrung.",
+        "Kenntnisse in über 35 Softwaresystemen — CAD, PDM, ERP, API-Programmierung und Datenbanken. Kein theoretisches Wissen, sondern nachgewiesene Projekterfahrung.",
       morePill: "+ viele mehr",
       cadTitle: "CAD-Systeme",
       pdmTitle: "PDM-Systeme",
+      erpTitle: "ERP-Systeme",
       progTitle: "Programmiersprachen",
       apiTitle: "API-Programmierung",
       dbTitle: "Datenbanken",
@@ -279,15 +280,15 @@ export const T = {
       title: "vf solutions | CAD & PDM consulting and migration",
       description: "Over 35 years of experience in CAD and PDM projects for mechanical and plant engineering. Core focus: CAD/PDM migration. 200+ projects, 45 reference clients. 100% vendor-neutral.",
       heroHeadlineA: "CAD, PDM and ERP —",
-      heroHeadlineB: "safely migrated, cleanly connected, precisely optimized.",
+      heroHeadlineB: "precisely optimized, seamlessly connected, safely migrated.",
       heroLead:
-        "Since 1989, vf solutions has reliably migrated grown CAD, PDM and ERP data into new systems — vendor-neutral advice, controllable delivery and no standstill in day-to-day operations.",
+        "For over 35 years, vf solutions has supported successful projects in mechanical and plant engineering — from design through to organization. Always vendor-neutral advice, controllable delivery and no standstill in day-to-day operations.",
       philoTitleA: "100% independent.",
       philoTitleB: "100% client-focused.",
       philoP1:
-        "For over 20 years, vf solutions has stood for successful projects across the CAD/PDM/ERP environment — in design, development and organization at mechanical and plant engineering companies.",
+        "vf solutions is positioned 100% system- and vendor-neutral and is therefore entirely independent of manufacturers and their products.",
       philoP2:
-        "vf solutions is positioned 100% system- and vendor-neutral, and therefore independent of manufacturers and their products. vf solutions acts solely as the advocate of its clients' interests, supporting them with consulting, development and controllable delivery.",
+        "vf solutions acts as the advocate of your interests, supporting you with consulting, development and controllable delivery.",
       philoP3Pre: "Every project runs without disrupting daily operations. The outcomes are ",
       philoP3Strong: "controllable",
       philoP3Post: " — measurable, demonstrable and fit for practice.",
@@ -307,7 +308,7 @@ export const T = {
       eyebrow: "Services",
       heroTitle: "Consulting, delivery and stabilization from a single source",
       heroLead:
-        "The core focus is now on CAD/PDM — complemented by viable processes and clear system logic. Designed and delivered right in the middle of ongoing operations, so day-to-day business keeps running undisturbed.",
+        "The core focus is now on CAD/PDM migrations — complemented by viable processes and clear system logic. Designed and delivered right in the middle of ongoing operations, so day-to-day business keeps running undisturbed.",
       focusBadge: "Core focus",
       uspEyebrow: "Commercial principles",
       uspTitle: "Fair, transparent terms",
@@ -327,7 +328,7 @@ export const T = {
       heroTitleA: "200+ projects.",
       heroTitleB: "Since 1989.",
       heroLead:
-        "Since 1989, vf solutions has successfully delivered well over 200 projects — with a clear focus on CAD/PDM migration, complemented by custom development, classification and CAD/PDM rollouts.",
+        "Since 1989, vf solutions has successfully delivered well over 200 projects. Alongside the clear focus on CAD/PDM migrations, the service portfolio covers custom development, CAD/PDM rollouts and part numbering.",
       stats: [
         { value: "200+", label: "Projects in total" },
         { value: "50+", label: "CAD system changes" },
@@ -355,10 +356,11 @@ export const T = {
       eyebrow: "Technical expertise",
       heroTitle: "System depth from 35 years of practice",
       heroLead:
-        "Hands-on knowledge of more than 35 software systems — CAD, PDM, API programming and databases. Not theoretical knowledge, but proven project experience.",
+        "Hands-on knowledge of more than 35 software systems — CAD, PDM, ERP, API programming and databases. Not theoretical knowledge, but proven project experience.",
       morePill: "+ many more",
       cadTitle: "CAD systems",
       pdmTitle: "PDM systems",
+      erpTitle: "ERP systems",
       progTitle: "Programming languages",
       apiTitle: "API programming",
       dbTitle: "Databases",

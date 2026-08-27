@@ -1,14 +1,18 @@
-import { asset } from "@/lib/basePath";
+import { asset, BASE_PATH } from "@/lib/basePath";
 
 export type Locale = "de" | "en";
 export const LOCALES: Locale[] = ["de", "en"];
 export const DEFAULT_LOCALE: Locale = "de";
 
-// Web3Forms access key for the contact form (https://web3forms.com — free,
-// works on the static GitHub-Pages build). Create a key with freundt@vfsolutions.de
-// and paste it here. While empty, the form falls back to opening the visitor's
-// email client (mailto) so it still works.
-export const WEB3FORMS_ACCESS_KEY = "";
+// Endpoint the contact form posts to: public/kontakt.php, which ships with the
+// static export and runs on the customer's own IONOS webspace — no third-party
+// form service, so nothing leaves the customer's server.
+//
+// GitHub Pages serves static files only, so the preview build (BASE_PATH set)
+// gets an empty endpoint and falls back to opening the visitor's mail client.
+// Same in `next dev`: the dev server hands out the PHP file as plain text, so
+// use the mailto fallback there or test against `php -S localhost:8000` in out/.
+export const CONTACT_ENDPOINT = BASE_PATH ? "" : "/kontakt.php";
 
 export const CONTACT = {
   name: "vf solutions",
@@ -490,6 +494,18 @@ export const PDM_SYSTEME = [
   "CADIM EDB",
   "SmarTeam",
   "IMAN / UGManager",
+];
+
+export const ERP_SYSTEME = [
+  "SAP",
+  "PSI/Penta",
+  "AMS",
+  "Majesty",
+  "FORMAT",
+  "AlphaPlan",
+  "Infor",
+  "BRAIN",
+  "P2",
 ];
 
 export const PROGRAMMIERUNG = [

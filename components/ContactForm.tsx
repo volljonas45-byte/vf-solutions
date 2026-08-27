@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CONTACT, WEB3FORMS_ACCESS_KEY, type Locale } from "@/lib/data";
+import { CONTACT, CONTACT_ENDPOINT, type Locale } from "@/lib/data";
+import { asset } from "@/lib/basePath";
 import { t } from "@/lib/i18n";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -34,9 +35,18 @@ export default function ContactForm({ locale }: { locale: Locale }) {
     const company = (data.get("company") as string)?.trim() ?? "";
     const phone = (data.get("phone") as string)?.trim() ?? "";
     const service = (data.get("service") as string) ?? "";
+    // Honeypot: hidden from humans, irresistible to bots. Filled in → drop the
+    // submission but report success so the bot has nothing to learn.
+    const honeypot = (data.get("website") as string)?.trim() ?? "";
 
-    // No Web3Forms key configured yet → fall back to the visitor's email client.
-    if (!WEB3FORMS_ACCESS_KEY) {
+    if (honeypot) {
+      setStatus("success");
+      form.reset();
+      return;
+    }
+
+    // No PHP endpoint (GitHub Pages preview) → fall back to the visitor's email client.
+    if (!CONTACT_ENDPOINT) {
       const subject =
         locale === "de"
           ? `Anfrage über vfsolutions.de — ${name}`
@@ -61,26 +71,22 @@ export default function ContactForm({ locale }: { locale: Locale }) {
     setStatus("sending");
     setErrorMsg("");
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch(asset(CONTACT_ENDPOINT), {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject:
-            locale === "de"
-              ? `Neue Anfrage über vfsolutions.de — ${name}`
-              : `New enquiry via vfsolutions.de — ${name}`,
-          from_name: name,
           name,
           company,
           email,
           phone,
           service,
           message,
+          privacy,
+          locale,
         }),
       });
       const json = await res.json();
-      if (json.success) {
+      if (res.ok && json.success) {
         setStatus("success");
         form.reset();
       } else {
@@ -113,6 +119,15 @@ export default function ContactForm({ locale }: { locale: Locale }) {
       <p className="text-sm text-[#64748B] mb-6">{k.formLead}</p>
 
       <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+        {/* Honeypot — off-screen instead of display:none, which some bots skip. */}
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute left-[-9999px] h-0 w-0 opacity-0"
+        />
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-medium text-[#4A5568] mb-1.5 uppercase tracking-wide">

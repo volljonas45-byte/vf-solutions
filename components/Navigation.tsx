@@ -37,7 +37,7 @@ export default function Navigation({ locale }: { locale: Locale }) {
           <img
             src={asset("/images/logo-vf.png")}
             alt="vf solutions"
-            className="h-[66px] w-auto object-contain"
+            className="h-[40px] w-auto object-contain"
           />
         </Link>
 
